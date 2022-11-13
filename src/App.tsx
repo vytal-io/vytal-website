@@ -1,10 +1,11 @@
 import { ThemeProvider } from 'theme-ui'
+import Header from './Header'
 import { theme } from './theme'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App"></div>
+      <Header />
     </ThemeProvider>
   )
 }
