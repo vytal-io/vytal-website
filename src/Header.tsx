@@ -1,7 +1,7 @@
 import { Flex, Link } from 'theme-ui'
 import logo from './logo.svg'
 
-function App() {
+const Header = () => {
   return (
     <Flex
       sx={{
@@ -13,16 +13,13 @@ function App() {
         background: 'offWhite',
       }}
     >
-      <Flex sx={{ width: '1100px', justifyContent: 'space-between' }}>
+      <Flex sx={{ width: '1000px', justifyContent: 'space-between' }}>
         <Flex sx={{ gap: '26px', alignItems: 'center' }}>
-          <Link href="/">
+          <Link href="/" sx={{ height: '36px' }}>
             <img src={logo} alt="Vytal logo" />
           </Link>
-          <Link variant="nav" href="/scan">
+          <Link variant="nav" href="/">
             Scan
-          </Link>
-          <Link variant="nav" href="/faq">
-            FAQ
           </Link>
           <Link
             variant="nav"
@@ -31,7 +28,7 @@ function App() {
           >
             Source Code
           </Link>
-          <Link variant="nav" href="#/donate">
+          <Link variant="nav" href="/donate">
             Donate
           </Link>
         </Flex>
@@ -57,4 +54,4 @@ function App() {
   )
 }
 
-export default App
+export default Header
