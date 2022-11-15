@@ -23,10 +23,15 @@ export const theme: Theme = {
     nav: {
       textDecoration: 'none',
       color: 'textSecondary',
-      fontWeight: '400',
-      p: 0,
       ':hover': {
         color: 'primaryDark',
+      },
+    },
+    text: {
+      textDecoration: 'none',
+      color: 'primaryDark',
+      ':hover': {
+        textDecoration: 'underline',
       },
     },
   },

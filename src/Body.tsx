@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Link } from 'theme-ui'
+import { Box, Flex, Link } from 'theme-ui'
 import Block from './Block'
 import ScanBlock from './ScanBlock'
 
@@ -18,11 +18,36 @@ const Body = () => {
       >
         <Block>
           <Box sx={{ p: '20px', background: '#fefefe', borderRadius: '4px' }}>
-            Vytal is a browser extension that utilizes the chrome.debugger API
-            to mock device data that could otherwise reveal information about
-            you. This website scans your browser for such data. A red x
-            signifies that the scanner has detected tampered data. A green check
-            means that no tampering has been detected.
+            Vytal is a browser extension that can spoof your timezone, locale,
+            geolocation and user agent. This data can be used to determine your
+            location and track you online. You can use this scan to test is
+            you're timezone, locale, geolocation and user agent is exposed.
+            Vytal fully spoofs all of these values.
+            <br /> Download for{' '}
+            <Link
+              variant="text"
+              href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=scan"
+              target="_blank"
+            >
+              Chrome
+            </Link>
+            ,{' '}
+            <Link
+              variant="text"
+              href="https://microsoftedge.microsoft.com/addons/detail/vytal-spoof-timezone-l/nkaemodamjfefjgbefolnpnlccpdfpap"
+              target="_blank"
+            >
+              Edge
+            </Link>{' '}
+            or{' '}
+            <Link
+              variant="text"
+              href="https://addons.opera.com/en/extensions/details/vytal-spoof-timezone-location-user-agent"
+              target="_blank"
+            >
+              Opera
+            </Link>
+            .
           </Box>
         </Block>
         <Flex sx={{ gap: '24px' }}>
