@@ -1,13 +1,26 @@
 import { ThemeProvider } from 'theme-ui'
-import Body from './Body'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Scan from './Scan'
+import Donate from './Donate'
 import Header from './Header'
 import { theme } from './theme'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Scan />,
+  },
+  {
+    path: '/donate',
+    element: <Donate />,
+  },
+])
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <Body />
+      <RouterProvider router={router} />
     </ThemeProvider>
   )
 }

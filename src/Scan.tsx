@@ -2,7 +2,7 @@ import { Box, Flex, Link } from 'theme-ui'
 import Block from './Block'
 import ScanBlock from './ScanBlock'
 
-const Body = () => {
+const Scan = () => {
   return (
     <Flex
       sx={{
@@ -105,4 +105,4 @@ const Body = () => {
   )
 }
 
-export default Body
+export default Scan
