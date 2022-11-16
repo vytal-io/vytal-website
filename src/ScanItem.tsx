@@ -17,7 +17,7 @@ const ScanItem = ({ title, data, noBorder }: ScanItemProps) => {
         fontSize: '15px',
       }}
     >
-      <Box sx={{ whiteSpace: 'nowrap', width: '150px' }}>{title}</Box>
+      <Box sx={{ whiteSpace: 'nowrap', minWidth: '120px' }}>{title}</Box>
       <Box sx={{ color: 'textSecondary' }}>{data}</Box>
     </Flex>
   )
