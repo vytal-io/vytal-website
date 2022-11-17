@@ -17,7 +17,7 @@ const ScanBlock = ({ heading, subHeading, data }: ScanBlockProps) => {
           borderColor: 'border',
           p: '16px 20px',
           borderRadius: '4px 4px 0 0',
-          background: '#fefefe',
+          background: 'offWhite',
         }}
       >
         <Heading>{heading}</Heading>

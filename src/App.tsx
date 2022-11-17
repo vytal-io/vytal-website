@@ -1,18 +1,18 @@
 import { ThemeProvider } from 'theme-ui'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Scan from './Scan'
-import Donate from './Donate'
+import ScanPage from './ScanPage'
+import DonatePage from './DonatePage'
 import Header from './Header'
 import { theme } from './theme'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Scan />,
+    element: <ScanPage />,
   },
   {
     path: '/donate',
-    element: <Donate />,
+    element: <DonatePage />,
   },
 ])
 
