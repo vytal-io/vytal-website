@@ -1,13 +1,11 @@
-import { Box, ThemeUIStyleObject } from 'theme-ui'
+import { Box, type BoxProps } from 'theme-ui'
 
-interface BlockProps {
-  children: React.ReactNode
-  style?: ThemeUIStyleObject
-}
+type BlockProps = React.PropsWithChildren<BoxProps>
 
-const Block = ({ children, style }: BlockProps) => {
+const Block: React.FC<BlockProps> = ({ children, ...props }) => {
   return (
     <Box
+      {...props}
       sx={{
         border: '1px solid',
         borderColor: 'border',
@@ -15,7 +13,7 @@ const Block = ({ children, style }: BlockProps) => {
         width: '100%',
         lineHeight: '24px',
         mb: '24px',
-        ...style,
+        ...(props.sx || {}),
       }}
     >
       {children}

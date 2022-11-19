@@ -1,5 +1,6 @@
 import { Box, Flex } from 'theme-ui'
 import DonateBlock from './DonateBlock'
+import DonateLink from './DonateLink'
 import PageBody from './PageBody'
 
 const DonatePage = () => {
@@ -7,9 +8,9 @@ const DonatePage = () => {
     <PageBody>
       <Flex sx={{ gap: '24px' }}>
         <Box sx={{ width: '100%' }}>
-          <DonateBlock
+          <DonateLink
             heading="Paypal"
-            subHeading="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+            subHeading="https://www.paypal.com/donate/?hosted_button_id=ZA299UEACUPLU"
           />
           <DonateBlock
             heading="Bitcoin"
@@ -29,8 +30,8 @@ const DonatePage = () => {
           />
         </Box>
         <Box sx={{ width: '100%' }}>
-          <DonateBlock
-            heading="Buy Me a Coffee (Credit Card)"
+          <DonateLink
+            heading="Buy Me a Coffee"
             subHeading="https://www.buymeacoffee.com/vytal"
           />
           <DonateBlock
