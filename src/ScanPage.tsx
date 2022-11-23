@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Box, Flex, Link } from 'theme-ui'
+import { Box, Flex, Heading, Link } from 'theme-ui'
 import scan from './scan'
 import Block from './Block'
 import PageBody from './PageBody'
 import ScanBlock from './ScanBlock'
+import ScanItem from './ScanItem'
 
 const ScanPage = () => {
   const [scanData, setScanData] = useState<any>(undefined)
@@ -18,10 +19,11 @@ const ScanPage = () => {
       <Block sx={{ p: '20px', background: 'offWhite' }}>
         Vytal is a browser extension that can spoof your timezone, locale,
         geolocation and user agent. This data can be used to determine your
-        location and track you online. You can use this scan to test if you're
-        timezone, locale, geolocation and user agent is exposed. The Vytal
-        extension spoofs all of these values.
-        <br /> Download for{' '}
+        location and track you online. Use this scan to test if any of this data
+        is exposed. Red highlighting means that tampering has been detected and
+        that the data is not authentic.
+        <br /> The Vytal extension spoofs all of these values undetected.
+        Download for{' '}
         <Link
           variant="text"
           href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=scan"
@@ -53,50 +55,115 @@ const ScanPage = () => {
             <ScanBlock
               heading="Time Zone"
               subHeading="intl.DateTimeFormat().resolvedOptions().timeZone"
-              data={scanData.clientData.timezone.topWindow.value}
+              data={scanData.clientData.timezone}
             />
             <ScanBlock
               heading="Time Zone Offset"
               subHeading="new Date().getTimezoneOffset()"
-              data="300"
+              data={scanData.clientData.timezoneOffset}
             />
             <ScanBlock
               heading="Date Locale"
               subHeading="new Date().toLocaleString()"
-              data="11/13/2022, 4:55:31 AM"
+              data={scanData.clientData.dateLocale}
             />
             <ScanBlock
               heading="User Agent"
               subHeading="navigator.userAgent"
-              data="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+              data={scanData.clientData.userAgent}
             />
             <ScanBlock
               heading="Platform"
               subHeading="navigator.platform"
-              data="Linux x86_64"
+              data={scanData.clientData.platform}
             />
           </Box>
           <Box sx={{ width: '100%' }}>
+            <Block>
+              <Box
+                sx={{
+                  borderBottom: '1px solid',
+                  borderColor: 'border',
+                  p: '16px 20px',
+                  borderRadius: '4px 4px 0 0',
+                  background: 'offWhite',
+                }}
+              >
+                <Heading>Geolocation</Heading>
+                <Box sx={{ color: 'textSecondary' }}>
+                  navigator.geolocation.getCurrentPosition()
+                </Box>
+              </Box>
+              {scanData.htmlGeolocation.data ? (
+                <>
+                  <ScanItem
+                    title="Reverse Geocode"
+                    tampered={scanData.htmlGeolocation.tampered}
+                    value={scanData.htmlGeolocation.data.reverseGeocode}
+                  />
+                  <ScanItem
+                    title="Latitude"
+                    tampered={scanData.htmlGeolocation.tampered}
+                    value={scanData.htmlGeolocation.data.latitude}
+                  />
+                  <ScanItem
+                    title="Longitude"
+                    tampered={scanData.htmlGeolocation.tampered}
+                    value={scanData.htmlGeolocation.data.longitude}
+                  />
+                  <ScanItem
+                    title="Accuracy"
+                    tampered={scanData.htmlGeolocation.tampered}
+                    value={scanData.htmlGeolocation.data.accuracy}
+                  />
+                  <ScanItem
+                    title="Altitude"
+                    tampered={scanData.htmlGeolocation.tampered}
+                    value={scanData.htmlGeolocation.data.altitude}
+                  />
+                  <ScanItem
+                    title="Altitude Accuracy"
+                    tampered={scanData.htmlGeolocation.tampered}
+                    value={scanData.htmlGeolocation.data.altitudeAccuracy}
+                  />
+                  <ScanItem
+                    title="Heading"
+                    tampered={scanData.htmlGeolocation.tampered}
+                    value={scanData.htmlGeolocation.data.heading}
+                  />
+                  <ScanItem
+                    title="Speed"
+                    tampered={scanData.htmlGeolocation.tampered}
+                    value={scanData.htmlGeolocation.data.speed}
+                    noBorder
+                  />
+                </>
+              ) : (
+                <Flex
+                  sx={{
+                    p: '12px 20px',
+                    justifyContent: 'space-between',
+                    fontSize: '15px',
+                  }}
+                >
+                  {scanData.htmlGeolocation}
+                </Flex>
+              )}
+            </Block>
             <ScanBlock
               heading="Locale"
               subHeading="Intl.DateTimeFormat().resolvedOptions().locale"
-              data="en-US"
+              data={scanData.clientData.locale}
             />
             <ScanBlock
               heading="Date"
               subHeading="new Date().toString()"
-              data="Sun Nov 13 2022 04:55:31 GMT-0500 (Eastern Standard Time)"
+              data={scanData.clientData.dateString}
             />
-            <ScanBlock
-              heading="Time"
-              subHeading="new Date().getTime()"
-              data="1668375771795"
-            />
-
             <ScanBlock
               heading="App Version"
               subHeading="navigator.appVersion"
-              data="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+              data={scanData.clientData.appVersion}
             />
           </Box>
         </Flex>

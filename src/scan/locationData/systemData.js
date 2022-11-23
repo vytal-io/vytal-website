@@ -71,21 +71,21 @@ const systemData = {
     value: new Date().toString(),
     tampered: checkDatePrototype(),
   },
-  language: {
-    value: navigator.language,
-    tampered: getNavigatorValue('language'),
-  },
-  languages: {
-    value: navigator.languages,
-    tampered: getNavigatorValue('languages'),
-  },
+  // language: {
+  //   title: '',
+  //   code: '',
+  //   value: navigator.language,
+  //   tampered: getNavigatorValue('language'),
+  // },
+  // languages: {
+  //   title: '',
+  //   code: '',
+  //   value: navigator.languages,
+  //   tampered: getNavigatorValue('languages'),
+  // },
   locale: {
     value: Intl.DateTimeFormat().resolvedOptions().locale,
     tampered: !!(checkIntlPrototype() || checkIntlConstructor()),
-  },
-  time: {
-    value: new Date().getTime(),
-    tampered: checkDatePrototype(),
   },
   timezone: {
     value: Intl.DateTimeFormat().resolvedOptions().timeZone,
@@ -94,6 +94,18 @@ const systemData = {
   timezoneOffset: {
     value: new Date().getTimezoneOffset(),
     tampered: checkDatePrototype(),
+  },
+  userAgent: {
+    value: navigator.userAgent,
+    tampered: getNavigatorValue('userAgent'),
+  },
+  platform: {
+    value: navigator.platform,
+    tampered: getNavigatorValue('platform'),
+  },
+  appVersion: {
+    value: navigator.appVersion,
+    tampered: getNavigatorValue('appVersion'),
   },
 }
 

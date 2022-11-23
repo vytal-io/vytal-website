@@ -9,6 +9,7 @@ export const theme: Theme = {
     primaryDark: '#9454d2',
     offWhite: '#fefefe',
     border: '#dee2e6',
+    red: '#fae6e8',
   },
   styles: {
     root: {

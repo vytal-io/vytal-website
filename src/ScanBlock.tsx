@@ -5,7 +5,7 @@ import ScanItem from './ScanItem'
 interface ScanBlockProps {
   heading: string
   subHeading: string
-  data: string
+  data: any
 }
 
 const ScanBlock = ({ heading, subHeading, data }: ScanBlockProps) => {
@@ -23,10 +23,19 @@ const ScanBlock = ({ heading, subHeading, data }: ScanBlockProps) => {
         <Heading>{heading}</Heading>
         <Box sx={{ color: 'textSecondary' }}>{subHeading}</Box>
       </Box>
-      <ScanItem title="Top Window" data={data} />
-      <ScanItem title="Frame" data={data} />
-      <ScanItem title="Web worker" data={data} />
-      <ScanItem title="Service worker" data={data} noBorder />
+      <ScanItem
+        title="Top Window"
+        tampered={data.topWindow.tampered}
+        value={data.topWindow.value}
+      />
+      {/* <ScanItem title="Frame" data={data} /> */}
+      <ScanItem
+        title="Web worker"
+        tampered={data.webWorker.tampered}
+        value={data.webWorker.value}
+        noBorder
+      />
+      {/* <ScanItem title="Service worker" data={data.topWindow.value} noBorder /> */}
     </Block>
   )
 }

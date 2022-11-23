@@ -2,11 +2,12 @@ import { Box, Flex } from 'theme-ui'
 
 interface ScanItemProps {
   title: string
-  data: string
+  tampered: boolean
+  value: string
   noBorder?: boolean
 }
 
-const ScanItem = ({ title, data, noBorder }: ScanItemProps) => {
+const ScanItem = ({ title, tampered, value, noBorder }: ScanItemProps) => {
   return (
     <Flex
       sx={{
@@ -15,10 +16,13 @@ const ScanItem = ({ title, data, noBorder }: ScanItemProps) => {
         borderColor: 'border',
         justifyContent: 'space-between',
         fontSize: '15px',
+        backgroundColor: tampered ? 'red' : 'white',
       }}
     >
-      <Box sx={{ whiteSpace: 'nowrap', minWidth: '120px' }}>{title}</Box>
-      <Box sx={{ color: 'textSecondary' }}>{data}</Box>
+      <Box sx={{ whiteSpace: 'nowrap', minWidth: '135px' }}>{title}</Box>
+      <Box sx={{ color: 'textSecondary', lineBreak: 'anywhere' }}>
+        {value || 'null'}
+      </Box>
     </Flex>
   )
 }
