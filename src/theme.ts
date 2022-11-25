@@ -3,7 +3,7 @@ import type { Theme } from 'theme-ui'
 export const theme: Theme = {
   colors: {
     textPrimary: '#212529',
-    textSecondary: '#83878a',
+    textSecondary: '#75797c',
     background: '#fff',
     primary: '#a55eea',
     primaryDark: '#9454d2',
