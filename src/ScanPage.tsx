@@ -21,9 +21,8 @@ const ScanPage = () => {
         geolocation and user agent. This data can be used to determine your
         location and track you online. Use this scan to test if any of this data
         is exposed. Red highlighting means that tampering has been detected and
-        that the data is not authentic.
-        <br /> The Vytal extension spoofs all of these values undetected.
-        Download for{' '}
+        that the data is not authentic. The Vytal extension spoofs all of these
+        values undetected. Download for{' '}
         <Link
           variant="text"
           href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=scan"

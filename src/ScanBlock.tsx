@@ -28,14 +28,17 @@ const ScanBlock = ({ heading, subHeading, data }: ScanBlockProps) => {
         tampered={data.topWindow.tampered}
         value={data.topWindow.value}
       />
-      {/* <ScanItem title="Frame" data={data} /> */}
+      <ScanItem
+        title="Frame"
+        tampered={data.frame.tampered}
+        value={data.frame.value}
+      />
       <ScanItem
         title="Web worker"
         tampered={data.webWorker.tampered}
         value={data.webWorker.value}
         noBorder
       />
-      {/* <ScanItem title="Service worker" data={data.topWindow.value} noBorder /> */}
     </Block>
   )
 }

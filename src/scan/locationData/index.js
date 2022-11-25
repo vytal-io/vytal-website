@@ -4,7 +4,7 @@ import getWorkerData from './workerData'
 import detectTor from './detectTor'
 import getWebRTCData from './webRtc'
 import getHtmlGeolocation from './htmlGeolocation'
-import getPrediction from './prediction'
+import getFrameData from './frameData'
 
 export {
   systemData,
@@ -13,5 +13,5 @@ export {
   detectTor,
   getWebRTCData,
   getHtmlGeolocation,
-  getPrediction,
+  getFrameData,
 }
