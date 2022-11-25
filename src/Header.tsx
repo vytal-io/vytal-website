@@ -23,7 +23,7 @@ const Header = () => {
           </Link>
           <Link
             variant="nav"
-            href="https://github.com/vytal-io/vytal-extension"
+            href="https://github.com/vytal-io"
             target="_blank"
           >
             Source Code
