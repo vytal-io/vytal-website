@@ -18,7 +18,7 @@ const Header = () => {
           <Link href="/" sx={{ height: '36px' }}>
             <img src={logo} alt="Vytal logo" />
           </Link>
-          <Link variant="nav" href="/">
+          <Link variant="nav" href="/scan">
             Scan
           </Link>
           <Link
@@ -33,17 +33,7 @@ const Header = () => {
           </Link>
         </Flex>
         <Link
-          sx={{
-            textDecoration: 'none',
-            color: '#fff',
-            height: '36px',
-            background: 'primary',
-            borderRadius: '4px',
-            padding: '8px 16px',
-            ':hover': {
-              background: 'primaryDark',
-            },
-          }}
+          variant="button"
           href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=header"
           target="_blank"
         >

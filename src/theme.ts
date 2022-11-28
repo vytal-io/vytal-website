@@ -5,10 +5,11 @@ export const theme: Theme = {
     textPrimary: '#212529',
     textSecondary: '#75797c',
     background: '#fff',
+    secondaryBackground: '#fcfcfc',
     primary: '#a55eea',
     primaryDark: '#9454d2',
     offWhite: '#fefefe',
-    border: '#dee2e6',
+    border: '#d8dee4',
     red: '#fae6e8',
   },
   styles: {
@@ -33,6 +34,20 @@ export const theme: Theme = {
       color: 'primaryDark',
       ':hover': {
         textDecoration: 'underline',
+      },
+    },
+    button: {
+      display: 'flex',
+      gap: '10px',
+      justifyContent: 'center',
+      textDecoration: 'none',
+      color: '#fff',
+      height: '36px',
+      background: 'primary',
+      borderRadius: '4px',
+      padding: '8px 16px',
+      ':hover': {
+        background: 'primaryDark',
       },
     },
   },

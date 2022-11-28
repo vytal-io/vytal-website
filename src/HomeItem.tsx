@@ -2,20 +2,20 @@ import { Box, Flex } from 'theme-ui'
 
 interface ScanItemProps {
   title: string
-  tampered: boolean
   value: string
   noBorder?: boolean
 }
 
-const ScanItem = ({ title, value, noBorder }: ScanItemProps) => {
+const HomeItem = ({ title, value, noBorder }: ScanItemProps) => {
   return (
     <Flex
       sx={{
-        p: '12px 20px',
+        p: '20px 20px',
         borderBottom: noBorder ? 'none' : '1px solid',
         borderColor: 'border',
         justifyContent: 'space-between',
-        fontSize: '15px',
+        fontSize: '18px',
+        borderRadius: noBorder ? '4px' : '0',
       }}
     >
       <Box sx={{ whiteSpace: 'nowrap', minWidth: '135px' }}>{title}</Box>
@@ -26,4 +26,4 @@ const ScanItem = ({ title, value, noBorder }: ScanItemProps) => {
   )
 }
 
-export default ScanItem
+export default HomeItem
