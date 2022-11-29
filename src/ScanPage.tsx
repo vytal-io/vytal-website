@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Box, Flex, Heading, Link } from 'theme-ui'
-import scan from './scan'
+import { fullScan } from './scan'
 import Block from './Block'
 import PageBody from './PageBody'
 import ScanBlock from './ScanBlock'
@@ -11,7 +11,7 @@ const ScanPage = () => {
 
   useEffect(() => {
     console.log('Scanning...')
-    scan().then((data) => setScanData(data))
+    fullScan().then((data: any) => setScanData(data))
   }, [])
 
   return (

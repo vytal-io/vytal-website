@@ -11,22 +11,24 @@ const Header = () => {
         borderBottom: '1px solid',
         borderColor: 'border',
         background: 'offWhite',
+        paddingLeft: 'calc(100vw - 100%)',
       }}
     >
-      <Flex sx={{ width: '1000px', justifyContent: 'space-between' }}>
+      <Flex
+        sx={{
+          width: '1000px',
+          justifyContent: 'space-between',
+        }}
+      >
         <Flex sx={{ gap: '26px', alignItems: 'center' }}>
           <Link href="/" sx={{ height: '36px' }}>
             <img src={logo} alt="Vytal logo" />
           </Link>
           <Link variant="nav" href="/scan">
-            Scan
+            About
           </Link>
-          <Link
-            variant="nav"
-            href="https://github.com/vytal-io"
-            target="_blank"
-          >
-            Source Code
+          <Link variant="nav" href="/scan">
+            Scan
           </Link>
           <Link variant="nav" href="/donate">
             Donate

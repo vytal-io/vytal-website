@@ -28,6 +28,10 @@ const DonatePage = () => {
             heading="Tether"
             subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
           />
+          <DonateBlock
+            heading="Binance Coin"
+            subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          />
         </Box>
         <Box sx={{ width: '100%' }}>
           <DonateLink
@@ -49,6 +53,10 @@ const DonatePage = () => {
           <DonateBlock
             heading="USD Coin"
             subHeading="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+          />
+          <DonateBlock
+            heading="Binance USD"
+            subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
           />
         </Box>
       </Flex>

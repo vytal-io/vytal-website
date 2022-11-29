@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Box, Flex, Heading, Link } from 'theme-ui'
+import { homeScan } from './scan'
 import Block from './Block'
 import PageBody from './PageBody'
 import ScanBlock from './ScanBlock'
@@ -9,16 +10,23 @@ import EdgeIcon from './edge.svg'
 import OperaIcon from './opera.svg'
 
 const HomePage = () => {
+  const [scanData, setScanData] = useState<any>(undefined)
+
+  useEffect(() => {
+    homeScan().then((data: any) => setScanData(data))
+    console.log(scanData)
+  }, [])
+
   return (
     <PageBody>
       <Flex
         sx={{
-          height: 'calc( 80vh - 84px)',
+          height: 'calc( 90vh - 84px)',
           alignItems: 'center',
           justifyContent: 'space-between',
         }}
       >
-        <Box sx={{ width: '45%' }}>
+        <Box sx={{ width: '45%', mb: '12px' }}>
           <Box sx={{ fontSize: '50px', lineHeight: '65px' }}>
             Spoof Timezone, Geolocation, Locale and User Agent.
           </Box>
@@ -34,7 +42,7 @@ const HomePage = () => {
               href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=header"
               target="_blank"
             >
-              <img src={ChromeIcon} alt="Chrome logo" />
+              <img src={ChromeIcon} alt="Chrome logo" width="20" />
               Chrome
             </Link>
             <Link
@@ -43,7 +51,7 @@ const HomePage = () => {
               href="https://microsoftedge.microsoft.com/addons/detail/vytal-spoof-timezone-l/nkaemodamjfefjgbefolnpnlccpdfpap"
               target="_blank"
             >
-              <img src={EdgeIcon} alt="Edge logo" />
+              <img src={EdgeIcon} alt="Edge logo" width="20" />
               Edge
             </Link>
             <Link
@@ -52,7 +60,7 @@ const HomePage = () => {
               href="https://addons.opera.com/en/extensions/details/vytal-spoof-timezone-location-user-agent/"
               target="_blank"
             >
-              <img src={OperaIcon} alt="Opera logo" />
+              <img src={OperaIcon} alt="Opera logo" width="20" />
               Opera
             </Link>
           </Flex>
@@ -61,20 +69,23 @@ const HomePage = () => {
           <HomeItem title="Geolocation" value={'12,671, -58.345'} />
           <HomeItem title="Timezone" value={'America/Toronto'} />
           <HomeItem title="Locale" value={'en-CA'} />
+          <HomeItem title="Date" value={'11/28/2022, 4:03:18 PM'} />
           <HomeItem title="Browser" value={'Chrome'} />
           <HomeItem title="OS" value={'Windows'} />
           <HomeItem title="Platform" value={'Win64'} />
-          <Flex
+          <Box
             sx={{
               p: '12px 20px',
-              justifyContent: 'space-between',
-              // fontSize: '18px',
               borderRadius: '4px',
               background: 'secondaryBackground',
             }}
           >
-            Test using full scan here.
-          </Flex>
+            Test and compare Vytal and other extensions using the{' '}
+            <Link variant="text" href="/scan">
+              full scan
+            </Link>
+            .
+          </Box>
         </Block>
       </Flex>
     </PageBody>

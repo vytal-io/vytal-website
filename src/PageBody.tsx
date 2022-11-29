@@ -9,6 +9,8 @@ const PageBody = ({ children }: PageBodyProps) => {
     <Flex
       sx={{
         justifyContent: 'center',
+        paddingLeft: 'calc(100vw - 100%)',
+        flex: '1 0 auto',
       }}
     >
       <Flex
