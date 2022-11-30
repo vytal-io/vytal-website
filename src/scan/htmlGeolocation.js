@@ -1,9 +1,7 @@
-const getGeocode = (lat, long) =>
-  fetch(
-    `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=AIzaSyByyRWGncal9iAq1-3Ek2WQ3ROLw9bCS-8`
-  )
+const getGeocode = (lat, lon) =>
+  fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
     .then((response) => response.json())
-    .then((data) => data.results[0].formatted_address)
+    .then((data) => data.display_name)
 
 const checkGetCurrentPosition = () => {
   if (
