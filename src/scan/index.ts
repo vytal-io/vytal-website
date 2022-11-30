@@ -1,12 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
-import {
-  systemData,
-  getWorkerData,
-  getHtmlGeolocation,
-  getFrameData,
-} from './locationData'
+import systemData from './locationData/systemData'
+import getWorkerData from './locationData/workerData'
+import getHtmlGeolocation from './locationData/htmlGeolocation'
+import getFrameData from './locationData/frameData'
+import UAParser from 'ua-parser-js'
 
 const fullScan = async () => {
   return await Promise.all([
@@ -55,6 +51,9 @@ const homeScan = async () => {
     // getHtmlGeolocation(),
   ]).then((promiseValues) => {
     const workerData = promiseValues[0]
+    let parser = new UAParser(workerData.userAgent.value)
+    let parserResults = parser.getResult()
+    console.log(parserResults)
     // let clientData = {}
     // Object.entries(systemData).forEach(([key]) => {
     //   clientData = {
@@ -76,15 +75,21 @@ const homeScan = async () => {
     //   }
     // })
 
-    // const data = {
-    //   clientData,
-    //   htmlGeolocation,
-    // }
+    const data = {
+      timezone: workerData.timezone.value,
+      locale: workerData.locale.value,
+      dateLocale: workerData.dateLocale.value,
+      platform: workerData.platform.value,
+      // @ts-ignore
+      browser: `${parserResults.browser.name} ${parserResults.browser.version}`,
+      engine: `${parserResults.engine.name} ${parserResults.engine.version}`,
+      // htmlGeolocation,
+    }
 
-    // console.log(data)
+    console.log(data)
 
-    return workerData
+    return data
   })
 }
 
-export default { fullScan, homeScan }
+export { fullScan, homeScan }

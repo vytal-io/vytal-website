@@ -13,8 +13,9 @@ const HomePage = () => {
   const [scanData, setScanData] = useState<any>(undefined)
 
   useEffect(() => {
-    homeScan().then((data: any) => setScanData(data))
-    console.log(scanData)
+    homeScan().then((data: any) => {
+      setScanData(data)
+    })
   }, [])
 
   return (
@@ -67,12 +68,13 @@ const HomePage = () => {
         </Box>
         <Block sx={{ width: '45%' }}>
           <HomeItem title="Geolocation" value={'12,671, -58.345'} />
-          <HomeItem title="Timezone" value={'America/Toronto'} />
-          <HomeItem title="Locale" value={'en-CA'} />
-          <HomeItem title="Date" value={'11/28/2022, 4:03:18 PM'} />
-          <HomeItem title="Browser" value={'Chrome'} />
-          <HomeItem title="OS" value={'Windows'} />
-          <HomeItem title="Platform" value={'Win64'} />
+          <HomeItem title="Timezone" value={scanData?.timezone || ' '} />
+          <HomeItem title="Locale" value={scanData?.locale || ' '} />
+          <HomeItem title="Date" value={scanData?.dateLocale || ' '} />
+          <HomeItem title="Browser" value={scanData?.browser || ' '} />
+          <HomeItem title="Platform" value={scanData?.platform || ' '} />
+          <HomeItem title="Engine" value={scanData?.engine || ' '} />
+
           <Box
             sx={{
               p: '12px 20px',
