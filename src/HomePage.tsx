@@ -67,7 +67,6 @@ const HomePage = () => {
           </Flex>
         </Box>
         <Block sx={{ width: '45%' }}>
-          <HomeItem title="Geolocation" value={'12,671, -58.345'} />
           <HomeItem title="Timezone" value={scanData?.timezone || ' '} />
           <HomeItem title="Locale" value={scanData?.locale || ' '} />
           <HomeItem title="Date" value={scanData?.dateLocale || ' '} />

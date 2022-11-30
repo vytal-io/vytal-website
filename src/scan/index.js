@@ -1,7 +1,7 @@
-import systemData from './locationData/systemData'
-import getWorkerData from './locationData/workerData'
-import getHtmlGeolocation from './locationData/htmlGeolocation'
-import getFrameData from './locationData/frameData'
+import systemData from './systemData'
+import getWorkerData from './workerData'
+import getHtmlGeolocation from './htmlGeolocation'
+import getFrameData from './frameData'
 import UAParser from 'ua-parser-js'
 
 const fullScan = async () => {
@@ -45,51 +45,21 @@ const fullScan = async () => {
   })
 }
 
-const homeScan = async () => {
-  return await Promise.all([
-    getWorkerData(),
-    // getHtmlGeolocation(),
-  ]).then((promiseValues) => {
-    const workerData = promiseValues[0]
-    let parser = new UAParser(workerData.userAgent.value)
-    let parserResults = parser.getResult()
-    console.log(parserResults)
-    // let clientData = {}
-    // Object.entries(systemData).forEach(([key]) => {
-    //   clientData = {
-    //     ...clientData,
-    //     [key]: {
-    //       topWindow: {
-    //         value: systemData[key].value,
-    //         tampered: systemData[key].tampered,
-    //       },
-    //       frame: {
-    //         value: frameData[key].value,
-    //         tampered: frameData[key].tampered,
-    //       },
-    //       webWorker: {
-    //         value: workerData[key].value,
-    //         tampered: workerData[key].tampered,
-    //       },
-    //     },
-    //   }
-    // })
+const homeScan = async () =>
+  getWorkerData().then((workerData) => {
+    const parser = new UAParser(workerData.userAgent.value)
+    const parserResults = parser.getResult()
 
     const data = {
       timezone: workerData.timezone.value,
       locale: workerData.locale.value,
       dateLocale: workerData.dateLocale.value,
       platform: workerData.platform.value,
-      // @ts-ignore
       browser: `${parserResults.browser.name} ${parserResults.browser.version}`,
       engine: `${parserResults.engine.name} ${parserResults.engine.version}`,
-      // htmlGeolocation,
     }
-
-    console.log(data)
 
     return data
   })
-}
 
 export { fullScan, homeScan }
