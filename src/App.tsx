@@ -1,24 +1,30 @@
 import { Flex, ThemeProvider } from 'theme-ui'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { theme } from './theme'
 import HomePage from './HomePage'
 import ScanPage from './ScanPage'
 import DonatePage from './DonatePage'
 import Header from './Header'
 import Footer from './Footer'
-import { theme } from './theme'
+import ErrorPage from './ErrorPage'
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <HomePage />,
-  },
-  {
-    path: '/scan',
-    element: <ScanPage />,
-  },
-  {
-    path: '/donate',
-    element: <DonatePage />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '',
+        element: <HomePage />,
+      },
+      {
+        path: '/scan',
+        element: <ScanPage />,
+      },
+      {
+        path: '/donate',
+        element: <DonatePage />,
+      },
+    ],
   },
 ])
 

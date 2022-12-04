@@ -25,10 +25,10 @@ const Header = () => {
             <img src={logo} alt="Vytal logo" />
           </Link>
           <Link variant="nav" href="/scan">
-            About
-          </Link>
-          <Link variant="nav" href="/scan">
             Scan
+          </Link>
+          <Link variant="nav" href="/faq">
+            FAQ
           </Link>
           <Link variant="nav" href="/donate">
             Donate
