@@ -1,4 +1,5 @@
 import { Box, Flex } from 'theme-ui'
+import Block from './Block'
 import DonateBlock from './DonateBlock'
 import DonateLink from './DonateLink'
 import PageBody from './PageBody'
@@ -6,6 +7,9 @@ import PageBody from './PageBody'
 const DonatePage = () => {
   return (
     <PageBody>
+      <Block sx={{ p: '20px', background: 'offWhite' }}>
+        <Box sx={{ fontSize: '24px' }}>Donate</Box>
+      </Block>
       <Flex sx={{ gap: '24px' }}>
         <Box sx={{ width: '100%' }}>
           <DonateLink

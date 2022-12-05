@@ -7,6 +7,7 @@ import DonatePage from './DonatePage'
 import Header from './Header'
 import Footer from './Footer'
 import ErrorPage from './ErrorPage'
+import FaqPage from './FaqScan'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/scan',
         element: <ScanPage />,
+      },
+      {
+        path: '/faq',
+        element: <FaqPage />,
       },
       {
         path: '/donate',
