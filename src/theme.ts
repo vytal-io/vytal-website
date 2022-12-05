@@ -21,6 +21,28 @@ export const theme: Theme = {
       color: 'textPrimary',
     },
   },
+  buttons: {
+    block: {
+      cursor: 'pointer',
+      color: 'textPrimary',
+      p: '20px',
+      backgroundColor: 'offWhite',
+      border: '1px solid',
+      borderColor: 'border',
+      borderRadius: '4px',
+      width: '100%',
+      lineHeight: '24px',
+      mb: '12px',
+      textAlign: 'left',
+      WebkitUserSelect: 'text',
+      MozUserSelect: 'text',
+      MsUserSelect: 'text',
+      userSelect: 'text',
+      ':hover': {
+        borderColor: 'primary',
+      },
+    },
+  },
   links: {
     nav: {
       textDecoration: 'none',

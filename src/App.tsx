@@ -7,7 +7,7 @@ import DonatePage from './DonatePage'
 import Header from './Header'
 import Footer from './Footer'
 import ErrorPage from './ErrorPage'
-import FaqPage from './FaqScan'
+import FaqPage from './FaqPage'
 
 const router = createBrowserRouter([
   {

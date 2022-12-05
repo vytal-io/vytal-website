@@ -25,24 +25,9 @@ const DonateBlock = ({ heading, subHeading }: DonateBlockProps) => {
 
   return (
     <Button
+      variant="block"
       sx={{
-        cursor: 'pointer',
-        p: '20px',
-        background: 'offWhite',
-        border: '1px solid',
-        borderColor: 'border',
-        borderRadius: '4px',
-        width: '100%',
-        lineHeight: '24px',
         mb: '24px',
-        textAlign: 'left',
-        WebkitUserSelect: 'text',
-        MozUserSelect: 'text',
-        MsUserSelect: 'text',
-        userSelect: 'text',
-        ':hover': {
-          borderColor: 'primary',
-        },
       }}
       onClick={() => copyToClipboard()}
     >
