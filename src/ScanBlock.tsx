@@ -6,16 +6,22 @@ interface ScanBlockProps {
   heading: string
   subHeading: string
   data: any
+  noMb?: boolean
 }
 
-const ScanBlock = ({ heading, subHeading, data }: ScanBlockProps) => {
+const ScanBlock = ({
+  heading,
+  subHeading,
+  data,
+  noMb = false,
+}: ScanBlockProps) => {
   return (
-    <Block>
+    <Block sx={{ mb: noMb ? 0 : ['18px', '24px', '24px'] }}>
       <Box
         sx={{
           borderBottom: '1px solid',
           borderColor: 'border',
-          p: '16px 20px',
+          p: ['12px', '16px 20px', '16px 20px'],
           borderRadius: '4px 4px 0 0',
           background: 'offWhite',
         }}

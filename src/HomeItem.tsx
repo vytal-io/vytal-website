@@ -10,11 +10,11 @@ const HomeItem = ({ title, value, noBorder }: ScanItemProps) => {
   return (
     <Flex
       sx={{
-        p: '20px 20px',
+        p: ['12px', '20px', '20px'],
         borderBottom: noBorder ? 'none' : '1px solid',
         borderColor: 'border',
         justifyContent: 'space-between',
-        fontSize: '18px',
+        fontSize: ['16px', '18px', '18px'],
         borderRadius: noBorder ? '4px' : '0',
       }}
     >

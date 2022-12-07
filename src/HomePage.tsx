@@ -30,19 +30,36 @@ const HomePage = () => {
         <Box
           sx={{
             width: ['100%', '100%', '45%'],
-            mb: ['24px', '24px', '12px'],
+            mb: ['30px', '30px', '0'],
             textAlign: ['center', 'center', 'left'],
           }}
         >
-          <Box sx={{ fontSize: '50px', lineHeight: '65px' }}>
+          <Box
+            sx={{
+              fontSize: ['38px', '50px', '50px'],
+              lineHeight: ['50px', '65px', '65px'],
+            }}
+          >
             Spoof Timezone, Geolocation, Locale and User Agent.
           </Box>
-          <Box sx={{ fontSize: '18px', lineHeight: '30px', mt: '20px' }}>
+          <Box
+            sx={{
+              fontSize: ['17px', '18px', '18px'],
+              lineHeight: '30px',
+              mt: ['18px', '20px', '20px'],
+            }}
+          >
             This data can be used to determine your location and track you
             online even with a VPN. Download the Vytal extension to spoof this
             data and protect yourself online.
           </Box>
-          <Flex sx={{ gap: '20px', mt: '30px', justifyContent: 'center' }}>
+          <Flex
+            sx={{
+              gap: '20px',
+              mt: ['24px', '24px', '30px'],
+              justifyContent: 'center',
+            }}
+          >
             <Link
               variant="button"
               sx={{ width: '135px' }}
@@ -72,7 +89,7 @@ const HomePage = () => {
             </Link>
           </Flex>
         </Box>
-        <Block sx={{ width: ['100%', '100%', '45%'] }}>
+        <Block sx={{ width: ['100%', '100%', '45%'], mb: 0 }}>
           <HomeItem title="Timezone" value={scanData?.timezone || ' '} />
           <HomeItem title="Locale" value={scanData?.locale || ' '} />
           <HomeItem title="Date" value={scanData?.dateLocale || ' '} />
@@ -82,7 +99,7 @@ const HomePage = () => {
 
           <Box
             sx={{
-              p: '12px 20px',
+              p: ['12px', '12px 20px', '12px 20px'],
               borderRadius: '4px',
               background: 'secondaryBackground',
             }}

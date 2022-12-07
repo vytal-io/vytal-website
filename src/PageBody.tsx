@@ -17,7 +17,7 @@ const PageBody = ({ children }: PageBodyProps) => {
         sx={{
           width: '1000px',
           flexDirection: 'column',
-          mt: ['12px', '24px', '24px'],
+          mt: ['18px', '24px', '24px'],
           mx: ['12px', '24px', '24px'],
         }}
       >

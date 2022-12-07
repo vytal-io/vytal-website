@@ -15,7 +15,7 @@ const Footer = () => {
         Contact
       </Link>
       <Link variant="nav" href="https://github.com/vytal-io" target="_blank">
-        Github
+        GitHub
       </Link>
       <Link variant="nav" href="https://twitter.com/vytalio" target="_blank">
         Twitter

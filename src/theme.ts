@@ -1,6 +1,7 @@
 import type { Theme } from 'theme-ui'
 
 export const theme: Theme = {
+  breakpoints: ['600px', '1050px'],
   colors: {
     textPrimary: '#212529',
     textSecondary: '#75797c',
@@ -15,7 +16,7 @@ export const theme: Theme = {
   styles: {
     root: {
       backgroundColor: 'background',
-      fontSize: '14px',
+      fontSize: ['13px', '14px', '14px'],
       lineHeight: '20px',
       margin: '0',
       color: 'textPrimary',
@@ -25,14 +26,13 @@ export const theme: Theme = {
     block: {
       cursor: 'pointer',
       color: 'textPrimary',
-      p: '20px',
+      p: ['12px', '20px', '20px'],
       backgroundColor: 'offWhite',
       border: '1px solid',
       borderColor: 'border',
       borderRadius: '4px',
       width: '100%',
       lineHeight: '24px',
-      mb: '12px',
       textAlign: 'left',
       WebkitUserSelect: 'text',
       MozUserSelect: 'text',

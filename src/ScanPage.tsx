@@ -18,7 +18,7 @@ const ScanPage = () => {
   return (
     <PageBody>
       <Block sx={{ p: '20px', background: 'offWhite' }}>
-        <Box sx={{ fontSize: '24px', mb: '10px' }}>Scan</Box>
+        <Box sx={{ fontSize: '24px', mb: ['6px', '10px', '10px'] }}>Scan</Box>
         Vytal is a browser extension that can spoof your timezone, locale,
         geolocation and user agent. This data can be used to determine your
         location and track you online. Use this scan to test if any of this data
@@ -51,12 +51,67 @@ const ScanPage = () => {
         .
       </Block>
       {scanData ? (
-        <Flex sx={{ gap: '24px' }}>
-          <Box sx={{ width: '100%' }}>
+        <>
+          <Box sx={{ display: ['none', 'none', 'flex'], gap: '24px' }}>
+            <Box sx={{ width: '100%' }}>
+              <ScanBlock
+                heading="Time Zone"
+                subHeading="intl.DateTimeFormat().resolvedOptions().timeZone"
+                data={scanData.clientData.timezone}
+              />
+              <ScanBlock
+                heading="Time Zone Offset"
+                subHeading="new Date().getTimezoneOffset()"
+                data={scanData.clientData.timezoneOffset}
+              />
+              <ScanBlock
+                heading="Date Locale"
+                subHeading="new Date().toLocaleString()"
+                data={scanData.clientData.dateLocale}
+              />
+              <ScanBlock
+                heading="User Agent"
+                subHeading="navigator.userAgent"
+                data={scanData.clientData.userAgent}
+              />
+              <ScanBlock
+                heading="Platform"
+                subHeading="navigator.platform"
+                data={scanData.clientData.platform}
+                noMb
+              />
+            </Box>
+            <Box sx={{ width: '100%' }}>
+              <GeolocationBlock geolocationData={scanData.htmlGeolocation} />
+              <ScanBlock
+                heading="Locale"
+                subHeading="Intl.DateTimeFormat().resolvedOptions().locale"
+                data={scanData.clientData.locale}
+              />
+              <ScanBlock
+                heading="Date"
+                subHeading="new Date().toString()"
+                data={scanData.clientData.dateString}
+              />
+              <ScanBlock
+                heading="App Version"
+                subHeading="navigator.appVersion"
+                data={scanData.clientData.appVersion}
+                noMb
+              />
+            </Box>
+          </Box>
+          <Box sx={{ display: ['block', 'block', 'none'], width: '100%' }}>
+            <GeolocationBlock geolocationData={scanData.htmlGeolocation} />
             <ScanBlock
               heading="Time Zone"
               subHeading="intl.DateTimeFormat().resolvedOptions().timeZone"
               data={scanData.clientData.timezone}
+            />
+            <ScanBlock
+              heading="Locale"
+              subHeading="Intl.DateTimeFormat().resolvedOptions().locale"
+              data={scanData.clientData.locale}
             />
             <ScanBlock
               heading="Time Zone Offset"
@@ -69,35 +124,28 @@ const ScanPage = () => {
               data={scanData.clientData.dateLocale}
             />
             <ScanBlock
-              heading="User Agent"
-              subHeading="navigator.userAgent"
-              data={scanData.clientData.userAgent}
-            />
-            <ScanBlock
-              heading="Platform"
-              subHeading="navigator.platform"
-              data={scanData.clientData.platform}
-            />
-          </Box>
-          <Box sx={{ width: '100%' }}>
-            <GeolocationBlock geolocationData={scanData.htmlGeolocation} />
-            <ScanBlock
-              heading="Locale"
-              subHeading="Intl.DateTimeFormat().resolvedOptions().locale"
-              data={scanData.clientData.locale}
-            />
-            <ScanBlock
               heading="Date"
               subHeading="new Date().toString()"
               data={scanData.clientData.dateString}
+            />
+            <ScanBlock
+              heading="User Agent"
+              subHeading="navigator.userAgent"
+              data={scanData.clientData.userAgent}
             />
             <ScanBlock
               heading="App Version"
               subHeading="navigator.appVersion"
               data={scanData.clientData.appVersion}
             />
+            <ScanBlock
+              heading="Platform"
+              subHeading="navigator.platform"
+              data={scanData.clientData.platform}
+              noMb
+            />
           </Box>
-        </Flex>
+        </>
       ) : (
         <Block
           sx={{

@@ -11,7 +11,7 @@ const GeolocationBlock = ({ geolocationData }: any) => {
         sx={{
           borderBottom: '1px solid',
           borderColor: 'border',
-          p: '16px 20px',
+          p: ['12px', '16px 20px', '16px 20px'],
           borderRadius: '4px 4px 0 0',
           background: 'offWhite',
         }}
@@ -68,7 +68,7 @@ const GeolocationBlock = ({ geolocationData }: any) => {
       ) : (
         <Flex
           sx={{
-            p: '12px 20px',
+            p: ['12px', '12px 20px', '12px 20px'],
             justifyContent: 'space-between',
             fontSize: '15px',
           }}

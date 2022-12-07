@@ -11,15 +11,9 @@ const FaqItem = ({ title, children }: FaqItemProps) => {
   const [showAnswer, setShowAnswer] = useState(false)
 
   return (
-    <Button
-      variant="block"
-      sx={{
-        mb: '12px',
-      }}
-      onClick={() => setShowAnswer(!showAnswer)}
-    >
+    <Button variant="block" onClick={() => setShowAnswer(!showAnswer)}>
       <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
-        <Box sx={{ fontSize: '18px' }}>{title}</Box>
+        <Box sx={{ fontSize: ['16px', '18px', '18px'] }}>{title}</Box>
         {showAnswer ? (
           <ChevronUp color="#83878a" size={30} />
         ) : (
