@@ -16,8 +16,9 @@ const PageBody = ({ children }: PageBodyProps) => {
       <Flex
         sx={{
           width: '1000px',
-          mt: '24px',
           flexDirection: 'column',
+          mt: '24px',
+          mx: '24px',
         }}
       >
         {children}

@@ -18,6 +18,7 @@ const Header = () => {
         sx={{
           width: '1000px',
           justifyContent: 'space-between',
+          mx: '24px',
         }}
       >
         <Flex sx={{ gap: '26px', alignItems: 'center' }}>

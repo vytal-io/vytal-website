@@ -17,9 +17,6 @@ const Footer = () => {
       <Link variant="nav" href="https://github.com/vytal-io" target="_blank">
         Github
       </Link>
-      <Link variant="nav" href="/donate" target="_blank">
-        Reddit
-      </Link>
       <Link variant="nav" href="https://twitter.com/vytalio" target="_blank">
         Twitter
       </Link>
