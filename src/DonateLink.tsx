@@ -10,6 +10,7 @@ const DonateLink = ({ heading, subHeading }: DonateLinkProps) => {
   return (
     <Link
       sx={{
+        width: '100%',
         display: 'block',
         textDecoration: 'none',
         p: '20px',
@@ -18,7 +19,6 @@ const DonateLink = ({ heading, subHeading }: DonateLinkProps) => {
         borderColor: 'border',
         borderRadius: '4px',
         lineHeight: '24px',
-        mb: '24px',
         ':hover': {
           borderColor: 'primary',
         },

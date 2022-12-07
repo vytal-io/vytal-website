@@ -11,14 +11,14 @@ const Header = () => {
         borderBottom: '1px solid',
         borderColor: 'border',
         background: 'offWhite',
-        paddingLeft: 'calc(100vw - 100%)',
+        pl: ['none', 'none', 'calc(100vw - 100%)'],
       }}
     >
       <Flex
         sx={{
           width: '1000px',
           justifyContent: 'space-between',
-          mx: '24px',
+          mx: ['12px', '24px', '24px'],
         }}
       >
         <Flex sx={{ gap: '26px', alignItems: 'center' }}>

@@ -13,28 +13,9 @@ const FaqItem = ({ title, children }: FaqItemProps) => {
   return (
     <Button
       variant="block"
-      sx={
-        {
-          // cursor: 'pointer',
-          // color: 'textPrimary',
-          // p: '20px',
-          // background: 'offWhite',
-          // border: '1px solid',
-          // borderColor: 'border',
-          // borderRadius: '4px',
-          // width: '100%',
-          // lineHeight: '24px',
-          // mb: '12px',
-          // textAlign: 'left',
-          // WebkitUserSelect: 'text',
-          // MozUserSelect: 'text',
-          // MsUserSelect: 'text',
-          // userSelect: 'text',
-          // ':hover': {
-          //   borderColor: 'primary',
-          // },
-        }
-      }
+      sx={{
+        mb: '12px',
+      }}
       onClick={() => setShowAnswer(!showAnswer)}
     >
       <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>

@@ -3,7 +3,6 @@ import { Box, Flex, Heading, Link } from 'theme-ui'
 import { homeScan } from './scan'
 import Block from './Block'
 import PageBody from './PageBody'
-import ScanBlock from './ScanBlock'
 import HomeItem from './HomeItem'
 import ChromeIcon from './chrome.svg'
 import EdgeIcon from './edge.svg'
@@ -20,14 +19,21 @@ const HomePage = () => {
 
   return (
     <PageBody>
-      <Flex
+      <Box
         sx={{
-          height: 'calc( 90vh - 84px)',
+          display: ['block', 'block', 'flex'],
+          height: ['auto', 'auto', 'calc( 90vh - 84px)'],
           alignItems: 'center',
           justifyContent: 'space-between',
         }}
       >
-        <Box sx={{ width: '45%', mb: '12px' }}>
+        <Box
+          sx={{
+            width: ['100%', '100%', '45%'],
+            mb: ['24px', '24px', '12px'],
+            textAlign: ['center', 'center', 'left'],
+          }}
+        >
           <Box sx={{ fontSize: '50px', lineHeight: '65px' }}>
             Spoof Timezone, Geolocation, Locale and User Agent.
           </Box>
@@ -36,7 +42,7 @@ const HomePage = () => {
             online even with a VPN. Download the Vytal extension to spoof this
             data and protect yourself online.
           </Box>
-          <Flex sx={{ gap: '20px', mt: '30px' }}>
+          <Flex sx={{ gap: '20px', mt: '30px', justifyContent: 'center' }}>
             <Link
               variant="button"
               sx={{ width: '135px' }}
@@ -66,7 +72,7 @@ const HomePage = () => {
             </Link>
           </Flex>
         </Box>
-        <Block sx={{ width: '45%' }}>
+        <Block sx={{ width: ['100%', '100%', '45%'] }}>
           <HomeItem title="Timezone" value={scanData?.timezone || ' '} />
           <HomeItem title="Locale" value={scanData?.locale || ' '} />
           <HomeItem title="Date" value={scanData?.dateLocale || ' '} />
@@ -88,7 +94,7 @@ const HomePage = () => {
             .
           </Box>
         </Block>
-      </Flex>
+      </Box>
     </PageBody>
   )
 }

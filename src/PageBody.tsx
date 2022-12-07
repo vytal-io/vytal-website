@@ -9,7 +9,7 @@ const PageBody = ({ children }: PageBodyProps) => {
     <Flex
       sx={{
         justifyContent: 'center',
-        paddingLeft: 'calc(100vw - 100%)',
+        pl: ['none', 'none', 'calc(100vw - 100%)'],
         flex: '1 0 auto',
       }}
     >
@@ -17,8 +17,8 @@ const PageBody = ({ children }: PageBodyProps) => {
         sx={{
           width: '1000px',
           flexDirection: 'column',
-          mt: '24px',
-          mx: '24px',
+          mt: ['12px', '24px', '24px'],
+          mx: ['12px', '24px', '24px'],
         }}
       >
         {children}

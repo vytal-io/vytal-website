@@ -5,6 +5,7 @@ import Block from './Block'
 import PageBody from './PageBody'
 import ScanBlock from './ScanBlock'
 import ScanItem from './ScanItem'
+import GeolocationBlock from './GeolocationBlock'
 
 const ScanPage = () => {
   const [scanData, setScanData] = useState<any>(undefined)
@@ -79,77 +80,7 @@ const ScanPage = () => {
             />
           </Box>
           <Box sx={{ width: '100%' }}>
-            <Block>
-              <Box
-                sx={{
-                  borderBottom: '1px solid',
-                  borderColor: 'border',
-                  p: '16px 20px',
-                  borderRadius: '4px 4px 0 0',
-                  background: 'offWhite',
-                }}
-              >
-                <Heading>Geolocation</Heading>
-                <Box sx={{ color: 'textSecondary' }}>
-                  navigator.geolocation.getCurrentPosition()
-                </Box>
-              </Box>
-              {scanData.htmlGeolocation.data ? (
-                <>
-                  <ScanItem
-                    title="Reverse Geocode"
-                    tampered={scanData.htmlGeolocation.tampered}
-                    value={scanData.htmlGeolocation.data.reverseGeocode}
-                  />
-                  <ScanItem
-                    title="Latitude"
-                    tampered={scanData.htmlGeolocation.tampered}
-                    value={scanData.htmlGeolocation.data.latitude}
-                  />
-                  <ScanItem
-                    title="Longitude"
-                    tampered={scanData.htmlGeolocation.tampered}
-                    value={scanData.htmlGeolocation.data.longitude}
-                  />
-                  <ScanItem
-                    title="Accuracy"
-                    tampered={scanData.htmlGeolocation.tampered}
-                    value={scanData.htmlGeolocation.data.accuracy}
-                  />
-                  <ScanItem
-                    title="Altitude"
-                    tampered={scanData.htmlGeolocation.tampered}
-                    value={scanData.htmlGeolocation.data.altitude}
-                  />
-                  <ScanItem
-                    title="Altitude Accuracy"
-                    tampered={scanData.htmlGeolocation.tampered}
-                    value={scanData.htmlGeolocation.data.altitudeAccuracy}
-                  />
-                  <ScanItem
-                    title="Heading"
-                    tampered={scanData.htmlGeolocation.tampered}
-                    value={scanData.htmlGeolocation.data.heading}
-                  />
-                  <ScanItem
-                    title="Speed"
-                    tampered={scanData.htmlGeolocation.tampered}
-                    value={scanData.htmlGeolocation.data.speed}
-                    noBorder
-                  />
-                </>
-              ) : (
-                <Flex
-                  sx={{
-                    p: '12px 20px',
-                    justifyContent: 'space-between',
-                    fontSize: '15px',
-                  }}
-                >
-                  {scanData.htmlGeolocation}
-                </Flex>
-              )}
-            </Block>
+            <GeolocationBlock geolocationData={scanData.htmlGeolocation} />
             <ScanBlock
               heading="Locale"
               subHeading="Intl.DateTimeFormat().resolvedOptions().locale"

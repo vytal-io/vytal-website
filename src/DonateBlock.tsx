@@ -24,13 +24,7 @@ const DonateBlock = ({ heading, subHeading }: DonateBlockProps) => {
   }
 
   return (
-    <Button
-      variant="block"
-      sx={{
-        mb: '24px',
-      }}
-      onClick={() => copyToClipboard()}
-    >
+    <Button variant="block" onClick={() => copyToClipboard()}>
       <Heading sx={{ mb: '8px' }}>{heading}</Heading>
       <Flex sx={{ alignItems: 'center', gap: '6px' }}>
         {showCheck ? (

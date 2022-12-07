@@ -12,7 +12,7 @@ const Block: React.FC<BlockProps> = ({ children, ...props }) => {
         borderRadius: '4px',
         width: '100%',
         lineHeight: '24px',
-        mb: '24px',
+        mb: ['12px', '24px', '24px'],
         ...(props.sx || {}),
       }}
     >
