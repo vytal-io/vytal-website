@@ -17,23 +17,27 @@ const DonatePage = () => {
             subHeading="https://www.paypal.com/donate/?hosted_button_id=ZA299UEACUPLU"
           />
           <DonateBlock
-            heading="Bitcoin"
+            heading="Bitcoin (BTC)"
             subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
           />
           <DonateBlock
-            heading="Monero"
+            heading="Monero (XMR)"
             subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
           />
           <DonateBlock
-            heading="Dogecoin"
+            heading="Dogecoin (DOGE)"
             subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
           />
           <DonateBlock
-            heading="Tether"
+            heading="Tether (USDT)"
             subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
           />
           <DonateBlock
-            heading="Binance Coin"
+            heading="Binance Coin (BNB)"
+            subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          />
+          <DonateBlock
+            heading="Litecoin (LTC)"
             subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
           />
         </Box>
@@ -43,23 +47,27 @@ const DonatePage = () => {
             subHeading="https://www.buymeacoffee.com/vytal"
           />
           <DonateBlock
-            heading="Ethereum"
+            heading="Ethereum (ETH)"
             subHeading="0x15Af5373b737818D72F311ac8482870cD4dbfa89"
           />
           <DonateBlock
-            heading="Ripple"
+            heading="Ripple (XRP)"
             subHeading="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
           />
           <DonateBlock
-            heading="Shiba Inu"
+            heading="Shiba Inu (SHIB)"
             subHeading="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
           />
           <DonateBlock
-            heading="USD Coin"
+            heading="USD Coin (USDC)"
             subHeading="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
           />
           <DonateBlock
-            heading="Binance USD"
+            heading="Binance USD (BUSD)"
+            subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          />
+          <DonateBlock
+            heading="Cardano (ADA)"
             subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
           />
         </Box>
