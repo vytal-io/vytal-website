@@ -27,7 +27,6 @@ export const theme: Theme = {
       color: 'textPrimary',
       fontFamily:
         "'Arial', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'",
-      // mb: '4px',
     },
     h2: {
       fontSize: ['16px', '20px', '20px'],
@@ -35,7 +34,6 @@ export const theme: Theme = {
       color: 'textPrimary',
       fontFamily:
         "'Arial', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'",
-      // mb: '4px',
     },
   },
   buttons: {
@@ -87,6 +85,12 @@ export const theme: Theme = {
       ':hover': {
         background: 'primaryDark',
       },
+    },
+  },
+  forms: {
+    input: {
+      color: 'textSecondary',
+      borderColor: 'border',
     },
   },
 }

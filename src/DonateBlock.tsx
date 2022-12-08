@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import { Box, Button, Flex, Heading } from 'theme-ui'
+import { Box, Button, Flex, Heading, Input } from 'theme-ui'
 import { Check, Copy } from 'react-feather'
 
 interface DonateBlockProps {
-  heading: string
-  subHeading: string
+  title: string
+  address: string
 }
 
-const DonateBlock = ({ heading, subHeading }: DonateBlockProps) => {
+const DonateBlock = ({ title, address }: DonateBlockProps) => {
   const [showCheck, setShowCheck] = useState(false)
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(subHeading)
+    navigator.clipboard.writeText(address)
     setShowCheck(true)
 
     const timeId = setTimeout(() => {
@@ -26,7 +26,7 @@ const DonateBlock = ({ heading, subHeading }: DonateBlockProps) => {
   return (
     <Button variant="block" onClick={() => copyToClipboard()}>
       <Heading variant="styles.h2" sx={{ mb: '8px' }}>
-        {heading}
+        {title}
       </Heading>
       <Flex sx={{ alignItems: 'center', gap: '6px' }}>
         {showCheck ? (
@@ -34,7 +34,7 @@ const DonateBlock = ({ heading, subHeading }: DonateBlockProps) => {
         ) : (
           <Copy color="#83878a" size={14} />
         )}
-        <Box sx={{ color: 'textSecondary' }}>{subHeading}</Box>
+        <Input value={address} readOnly />
       </Flex>
     </Button>
   )

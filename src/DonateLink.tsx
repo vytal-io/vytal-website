@@ -1,12 +1,12 @@
-import { Box, Flex, Heading, Link } from 'theme-ui'
+import { Box, Flex, Heading, Input, Link } from 'theme-ui'
 import { ExternalLink } from 'react-feather'
 
 interface DonateLinkProps {
-  heading: string
-  subHeading: string
+  title: string
+  url: string
 }
 
-const DonateLink = ({ heading, subHeading }: DonateLinkProps) => {
+const DonateLink = ({ title, url }: DonateLinkProps) => {
   return (
     <Link
       sx={{
@@ -23,24 +23,15 @@ const DonateLink = ({ heading, subHeading }: DonateLinkProps) => {
           borderColor: 'primary',
         },
       }}
-      href={subHeading}
+      href={url}
       target="_blank"
     >
       <Heading variant="styles.h2" sx={{ mb: '8px' }}>
-        {heading}
+        {title}
       </Heading>
       <Flex sx={{ alignItems: 'center', gap: '6px' }}>
         <ExternalLink color="#83878a" size={14} />
-        <Box
-          sx={{
-            color: 'textSecondary',
-            textOverflow: 'ellipsis',
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-          }}
-        >
-          {subHeading}
-        </Box>
+        <Input value={url} readOnly />
       </Flex>
     </Link>
   )

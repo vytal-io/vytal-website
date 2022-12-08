@@ -22,60 +22,60 @@ const DonatePage = () => {
         }}
       >
         <DonateLink
-          heading="Paypal"
-          subHeading="https://www.paypal.com/donate/?hosted_button_id=ZA299UEACUPLU"
+          title="Paypal"
+          url="https://www.paypal.com/donate/?hosted_button_id=ZA299UEACUPLU"
         />
         <DonateLink
-          heading="Buy Me a Coffee"
-          subHeading="https://www.buymeacoffee.com/vytal"
+          title="Buy Me a Coffee"
+          url="https://www.buymeacoffee.com/vytal"
         />
         <DonateBlock
-          heading="Bitcoin (BTC)"
-          subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          title="Bitcoin (BTC)"
+          address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         />
         <DonateBlock
-          heading="Ethereum (ETH)"
-          subHeading="0x15Af5373b737818D72F311ac8482870cD4dbfa89"
+          title="Ethereum (ETH)"
+          address="0x15Af5373b737818D72F311ac8482870cD4dbfa89"
         />
         <DonateBlock
-          heading="Monero (XMR)"
-          subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          title="Monero (XMR)"
+          address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         />
         <DonateBlock
-          heading="Ripple (XRP)"
-          subHeading="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+          title="Ripple (XRP)"
+          address="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
         />
         <DonateBlock
-          heading="Dogecoin (DOGE)"
-          subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          title="Dogecoin (DOGE)"
+          address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         />
         <DonateBlock
-          heading="Shiba Inu (SHIB)"
-          subHeading="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+          title="Shiba Inu (SHIB)"
+          address="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
         />
         <DonateBlock
-          heading="Tether (USDT)"
-          subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          title="Tether (USDT)"
+          address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         />
         <DonateBlock
-          heading="USD Coin (USDC)"
-          subHeading="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+          title="USD Coin (USDC)"
+          address="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
         />
         <DonateBlock
-          heading="Binance Coin (BNB)"
-          subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          title="Binance Coin (BNB)"
+          address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         />
         <DonateBlock
-          heading="Binance USD (BUSD)"
-          subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          title="Binance USD (BUSD)"
+          address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         />
         <DonateBlock
-          heading="Litecoin (LTC)"
-          subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          title="Litecoin (LTC)"
+          address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         />
         <DonateBlock
-          heading="Cardano (ADA)"
-          subHeading="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
+          title="Cardano (ADA)"
+          address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         />
       </Box>
     </PageBody>
