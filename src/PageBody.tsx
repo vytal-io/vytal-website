@@ -1,7 +1,7 @@
 import { Flex } from 'theme-ui'
 
 interface PageBodyProps {
-  children: React.ReactNode
+  children: React.ReactNode 
 }
 
 const PageBody = ({ children }: PageBodyProps) => {

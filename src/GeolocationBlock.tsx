@@ -1,7 +1,5 @@
-import { Box, Flex, Heading, Link } from 'theme-ui'
-
+import { Box, Flex, Heading } from 'theme-ui'
 import Block from './Block'
-
 import ScanItem from './ScanItem'
 
 const GeolocationBlock = ({ geolocationData }: any) => {
@@ -16,7 +14,7 @@ const GeolocationBlock = ({ geolocationData }: any) => {
           background: 'offWhite',
         }}
       >
-        <Heading>Geolocation</Heading>
+        <Heading variant="styles.h2">Geolocation</Heading>
         <Box sx={{ color: 'textSecondary' }}>
           navigator.geolocation.getCurrentPosition()
         </Box>

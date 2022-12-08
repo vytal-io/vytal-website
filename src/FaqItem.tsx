@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Button, Flex } from 'theme-ui'
+import { Box, Button, Flex, Heading } from 'theme-ui'
 import { ChevronUp, ChevronDown } from 'react-feather'
 
 interface FaqItemProps {
@@ -13,7 +13,12 @@ const FaqItem = ({ title, children }: FaqItemProps) => {
   return (
     <Button variant="block" onClick={() => setShowAnswer(!showAnswer)}>
       <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
-        <Box sx={{ fontSize: ['16px', '18px', '18px'] }}>{title}</Box>
+        <Heading
+          variant="styles.h2"
+          sx={{ fontSize: ['16px', '18px', '18px'] }}
+        >
+          {title}
+        </Heading>
         {showAnswer ? (
           <ChevronUp color="#83878a" size={30} />
         ) : (

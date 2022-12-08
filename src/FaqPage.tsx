@@ -1,4 +1,4 @@
-import { Box, Link } from 'theme-ui'
+import { Box, Heading, Link } from 'theme-ui'
 import Block from './Block'
 import PageBody from './PageBody'
 import FaqItem from './FaqItem'
@@ -7,7 +7,9 @@ const FaqPage = () => {
   return (
     <PageBody>
       <Block sx={{ p: '20px', background: 'offWhite' }}>
-        <Box sx={{ fontSize: '24px' }}>Frequently Asked Questions</Box>
+        <Heading as="h1" variant="styles.h1">
+          Frequently Asked Questions
+        </Heading>
       </Block>
       <Box
         sx={{

@@ -25,7 +25,9 @@ const DonateBlock = ({ heading, subHeading }: DonateBlockProps) => {
 
   return (
     <Button variant="block" onClick={() => copyToClipboard()}>
-      <Heading sx={{ mb: '8px' }}>{heading}</Heading>
+      <Heading variant="styles.h2" sx={{ mb: '8px' }}>
+        {heading}
+      </Heading>
       <Flex sx={{ alignItems: 'center', gap: '6px' }}>
         {showCheck ? (
           <Check color="#83878a" size={14} />

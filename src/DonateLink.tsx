@@ -26,7 +26,9 @@ const DonateLink = ({ heading, subHeading }: DonateLinkProps) => {
       href={subHeading}
       target="_blank"
     >
-      <Heading sx={{ mb: '8px' }}>{heading}</Heading>
+      <Heading variant="styles.h2" sx={{ mb: '8px' }}>
+        {heading}
+      </Heading>
       <Flex sx={{ alignItems: 'center', gap: '6px' }}>
         <ExternalLink color="#83878a" size={14} />
         <Box

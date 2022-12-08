@@ -18,7 +18,13 @@ const ScanPage = () => {
   return (
     <PageBody>
       <Block sx={{ p: '20px', background: 'offWhite' }}>
-        <Box sx={{ fontSize: '24px', mb: ['6px', '10px', '10px'] }}>Scan</Box>
+        <Heading
+          as="h1"
+          variant="styles.h1"
+          sx={{ mb: ['6px', '10px', '10px'] }}
+        >
+          Scan
+        </Heading>
         Vytal is a browser extension that can spoof your timezone, locale,
         geolocation and user agent. This data can be used to determine your
         location and track you online. Use this scan to test if any of this data

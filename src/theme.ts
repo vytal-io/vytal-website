@@ -21,6 +21,22 @@ export const theme: Theme = {
       margin: '0',
       color: 'textPrimary',
     },
+    h1: {
+      fontSize: '24px',
+      fontWeight: '500',
+      color: 'textPrimary',
+      fontFamily:
+        "'Arial', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'",
+      // mb: '4px',
+    },
+    h2: {
+      fontSize: ['16px', '20px', '20px'],
+      fontWeight: '500',
+      color: 'textPrimary',
+      fontFamily:
+        "'Arial', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'",
+      // mb: '4px',
+    },
   },
   buttons: {
     block: {
@@ -71,16 +87,6 @@ export const theme: Theme = {
       ':hover': {
         background: 'primaryDark',
       },
-    },
-  },
-  text: {
-    heading: {
-      fontWeight: '500',
-      fontSize: '20px',
-      color: 'textPrimary',
-      fontFamily:
-        "'Arial', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'",
-      mb: '4px',
     },
   },
 }

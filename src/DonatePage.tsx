@@ -1,4 +1,4 @@
-import { Box, Flex } from 'theme-ui'
+import { Box, Flex, Heading } from 'theme-ui'
 import Block from './Block'
 import DonateBlock from './DonateBlock'
 import DonateLink from './DonateLink'
@@ -8,7 +8,9 @@ const DonatePage = () => {
   return (
     <PageBody>
       <Block sx={{ p: '20px', background: 'offWhite' }}>
-        <Box sx={{ fontSize: '24px' }}>Donate</Box>
+        <Heading as="h1" variant="styles.h1">
+          Donate
+        </Heading>
       </Block>
       <Box
         sx={{

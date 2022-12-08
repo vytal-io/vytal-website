@@ -26,7 +26,7 @@ const ScanBlock = ({
           background: 'offWhite',
         }}
       >
-        <Heading>{heading}</Heading>
+        <Heading variant="styles.h2">{heading}</Heading>
         <Box sx={{ color: 'textSecondary' }}>{subHeading}</Box>
       </Box>
       <ScanItem
