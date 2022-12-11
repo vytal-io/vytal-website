@@ -12,6 +12,7 @@ export const theme: Theme = {
     offWhite: '#fefefe',
     border: '#d8dee4',
     red: '#fae6e8',
+    icon: '#83878a',
   },
   styles: {
     root: {
@@ -22,7 +23,7 @@ export const theme: Theme = {
       color: 'textPrimary',
     },
     h1: {
-      fontSize: '24px',
+      fontSize: ['20px', '24px', '24px'],
       fontWeight: '500',
       color: 'textPrimary',
       fontFamily:

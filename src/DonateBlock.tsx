@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Button, Flex, Heading, Input } from 'theme-ui'
+import { Button, Flex, Heading, Input } from 'theme-ui'
 import { Check, Copy } from 'react-feather'
 
 interface DonateBlockProps {
@@ -28,12 +28,8 @@ const DonateBlock = ({ title, address }: DonateBlockProps) => {
       <Heading variant="styles.h2" sx={{ mb: '8px' }}>
         {title}
       </Heading>
-      <Flex sx={{ alignItems: 'center', gap: '6px' }}>
-        {showCheck ? (
-          <Check color="#83878a" size={14} />
-        ) : (
-          <Copy color="#83878a" size={14} />
-        )}
+      <Flex sx={{ alignItems: 'center', gap: '6px', color: 'icon' }}>
+        {showCheck ? <Check size={14} /> : <Copy size={14} />}
         <Input value={address} readOnly />
       </Flex>
     </Button>

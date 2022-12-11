@@ -17,7 +17,7 @@ const ScanPage = () => {
 
   return (
     <PageBody>
-      <Block sx={{ p: '20px', background: 'offWhite' }}>
+      <Block sx={{ p: ['12px', '20px', '20px'], background: 'offWhite' }}>
         <Heading
           as="h1"
           variant="styles.h1"
@@ -155,7 +155,7 @@ const ScanPage = () => {
       ) : (
         <Block
           sx={{
-            p: '20px',
+            p: ['12px', '20px', '20px'],
             background: 'offWhite',
             display: 'flex',
             justifyContent: 'center',

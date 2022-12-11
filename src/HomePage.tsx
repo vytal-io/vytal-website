@@ -55,7 +55,7 @@ const HomePage = () => {
           </Box>
           <Flex
             sx={{
-              gap: '20px',
+              gap: ['12px', '20px', '20px'],
               mt: ['24px', '24px', '30px'],
               justifyContent: 'center',
             }}

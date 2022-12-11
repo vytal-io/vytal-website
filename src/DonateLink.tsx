@@ -13,7 +13,7 @@ const DonateLink = ({ title, url }: DonateLinkProps) => {
         width: '100%',
         display: 'block',
         textDecoration: 'none',
-        p: '20px',
+        p: ['12px', '20px', '20px'],
         background: 'offWhite',
         border: '1px solid',
         borderColor: 'border',
@@ -29,8 +29,10 @@ const DonateLink = ({ title, url }: DonateLinkProps) => {
       <Heading variant="styles.h2" sx={{ mb: '8px' }}>
         {title}
       </Heading>
-      <Flex sx={{ alignItems: 'center', gap: '6px' }}>
-        <ExternalLink color="#83878a" size={14} />
+      <Flex sx={{ alignItems: 'center', gap: '8px' }}>
+        <Box sx={{ color: 'icon' }}>
+          <ExternalLink size={14} />
+        </Box>
         <Input value={url} readOnly />
       </Flex>
     </Link>

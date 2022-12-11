@@ -15,11 +15,13 @@ const ScanItem = ({ title, value, noBorder }: ScanItemProps) => {
         borderBottom: noBorder ? 'none' : '1px solid',
         borderColor: 'border',
         justifyContent: 'space-between',
-        fontSize: '15px',
+        fontSize: ['13px', '15px', '15px'],
       }}
     >
       <Box sx={{ whiteSpace: 'nowrap', minWidth: '135px' }}>{title}</Box>
-      <Box sx={{ color: 'textSecondary', lineBreak: 'anywhere', textAlign: 'end' }}>
+      <Box
+        sx={{ color: 'textSecondary', lineBreak: 'anywhere', textAlign: 'end' }}
+      >
         {value || 'null'}
       </Box>
     </Flex>

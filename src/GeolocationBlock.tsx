@@ -68,7 +68,7 @@ const GeolocationBlock = ({ geolocationData }: any) => {
           sx={{
             p: ['12px', '12px 20px', '12px 20px'],
             justifyContent: 'space-between',
-            fontSize: '15px',
+            fontSize: ['13px', '15px', '15px'],
           }}
         >
           {geolocationData}

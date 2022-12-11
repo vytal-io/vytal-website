@@ -6,7 +6,7 @@ import FaqItem from './FaqItem'
 const FaqPage = () => {
   return (
     <PageBody>
-      <Block sx={{ p: '20px', background: 'offWhite' }}>
+      <Block sx={{ p: ['12px', '20px', '20px'], background: 'offWhite' }}>
         <Heading as="h1" variant="styles.h1">
           Frequently Asked Questions
         </Heading>
@@ -15,7 +15,6 @@ const FaqPage = () => {
         sx={{
           display: 'grid',
           gap: ['12px', '18px', '18px'],
-          // gridTemplateColumns: ['none', 'none', 'repeat(2, 1fr)'],
         }}
       >
         <FaqItem title="What is Vytal and why should I use it?">

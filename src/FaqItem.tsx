@@ -15,15 +15,13 @@ const FaqItem = ({ title, children }: FaqItemProps) => {
       <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
         <Heading
           variant="styles.h2"
-          sx={{ fontSize: ['16px', '18px', '18px'] }}
+          sx={{ fontSize: ['16px', '18px', '18px'], width: '100%' }}
         >
           {title}
         </Heading>
-        {showAnswer ? (
-          <ChevronUp color="#83878a" size={30} />
-        ) : (
-          <ChevronDown color="#83878a" size={30} />
-        )}
+        <Box sx={{ width: '30px', height: '30px', color: 'icon' }}>
+          {showAnswer ? <ChevronUp size={30} /> : <ChevronDown size={30} />}
+        </Box>
       </Flex>
       {showAnswer && (
         <Box sx={{ mt: '10px', color: 'textSecondary' }}>{children}</Box>
