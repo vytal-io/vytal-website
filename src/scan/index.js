@@ -39,8 +39,6 @@ const fullScan = async () => {
       htmlGeolocation,
     }
 
-    console.log(data)
-
     return data
   })
 }

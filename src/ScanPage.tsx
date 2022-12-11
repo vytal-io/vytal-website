@@ -11,7 +11,6 @@ const ScanPage = () => {
   const [scanData, setScanData] = useState<any>(undefined)
 
   useEffect(() => {
-    console.log('Scanning...')
     fullScan().then((data: any) => setScanData(data))
   }, [])
 

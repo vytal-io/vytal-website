@@ -52,6 +52,7 @@ const Header = () => {
           <Button
             sx={{
               all: 'unset',
+              cursor: 'pointer',
               display: ['block', 'none', 'none'],
               width: '25px',
               height: '25px',
