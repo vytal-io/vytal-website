@@ -1,5 +1,5 @@
 import { Box, Heading } from 'theme-ui'
-import Block from './Block'
+import Block from 'components/Block'
 import ScanItem from './ScanItem'
 
 interface ScanBlockProps {

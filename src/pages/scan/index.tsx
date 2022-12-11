@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Box, Flex, Heading, Link } from 'theme-ui'
-import { fullScan } from './scan'
-import Block from './Block'
-import PageBody from './PageBody'
+import { Box, Heading, Link } from 'theme-ui'
+import { fullScan } from 'scan'
+import Block from 'components/Block'
+import PageBody from 'components/PageBody'
 import ScanBlock from './ScanBlock'
-import ScanItem from './ScanItem'
 import GeolocationBlock from './GeolocationBlock'
 
 const ScanPage = () => {

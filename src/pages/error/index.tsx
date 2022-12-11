@@ -1,5 +1,5 @@
-import Block from './Block'
-import PageBody from './PageBody'
+import Block from 'components/Block'
+import PageBody from 'components/PageBody'
 
 const ErrorPage = () => {
   return (

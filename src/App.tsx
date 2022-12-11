@@ -1,13 +1,13 @@
 import { Flex, ThemeProvider } from 'theme-ui'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { theme } from './theme'
-import HomePage from './HomePage'
-import ScanPage from './ScanPage'
-import DonatePage from './DonatePage'
-import Header from './Header'
-import Footer from './Footer'
-import ErrorPage from './ErrorPage'
-import FaqPage from './FaqPage'
+import HomePage from 'pages/home'
+import ScanPage from 'pages/scan'
+import DonatePage from 'pages/donate'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import ErrorPage from 'pages/error'
+import FaqPage from 'pages/faq'
 
 const router = createBrowserRouter([
   {

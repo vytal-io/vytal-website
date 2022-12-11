@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Box, Flex, Heading, Link } from 'theme-ui'
-import { homeScan } from './scan'
-import Block from './Block'
-import PageBody from './PageBody'
+import { homeScan } from 'scan'
+import Block from 'components/Block'
+import PageBody from 'components/PageBody'
 import HomeItem from './HomeItem'
-import ChromeIcon from './chrome.svg'
-import EdgeIcon from './edge.svg'
-import OperaIcon from './opera.svg'
+import ChromeIcon from 'assets/chrome.svg'
+import EdgeIcon from 'assets/edge.svg'
+import OperaIcon from 'assets/opera.svg'
 
 const HomePage = () => {
   const [scanData, setScanData] = useState<any>(undefined)

@@ -1,6 +1,6 @@
 import { Box, Heading, Link } from 'theme-ui'
-import Block from './Block'
-import PageBody from './PageBody'
+import Block from 'components/Block'
+import PageBody from 'components/PageBody'
 import FaqItem from './FaqItem'
 
 const FaqPage = () => {

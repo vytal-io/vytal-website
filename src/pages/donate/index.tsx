@@ -1,8 +1,8 @@
 import { Box, Flex, Heading } from 'theme-ui'
-import Block from './Block'
+import Block from 'components/Block'
 import DonateBlock from './DonateBlock'
 import DonateLink from './DonateLink'
-import PageBody from './PageBody'
+import PageBody from 'components/PageBody'
 
 const DonatePage = () => {
   return (
@@ -37,7 +37,7 @@ const DonatePage = () => {
           title="Ethereum (ETH)"
           address="0x15Af5373b737818D72F311ac8482870cD4dbfa89"
         />
-        <DonateBlock
+        {/* <DonateBlock
           title="Monero (XMR)"
           address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         />
@@ -76,7 +76,7 @@ const DonatePage = () => {
         <DonateBlock
           title="Cardano (ADA)"
           address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
-        />
+        /> */}
       </Box>
     </PageBody>
   )

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Flex, Link, Image, Button } from 'theme-ui'
-import logo from './logo.svg'
+import logo from 'assets/logo.svg'
 import HeaderMenu from './HeaderMenu'
 import { Menu, X } from 'react-feather'
 
@@ -14,7 +14,6 @@ const Header = () => {
           alignItems: 'center',
           justifyContent: 'center',
           height: ['55px', '60px', '60px'],
-
           borderBottom: '1px solid',
           borderColor: 'border',
           background: 'offWhite',
