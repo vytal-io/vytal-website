@@ -29,12 +29,19 @@ const Header = () => {
           }}
         >
           <Flex sx={{ gap: '26px', alignItems: 'center' }}>
-            <Link href="/" sx={{ height: ['30px', '30px', '36px'] }}>
+            <Link
+              href="/"
+              sx={{
+                height: ['30px', '30px', '36px'],
+                width: ['133px', '133px', '160px'],
+              }}
+            >
               <Image
                 src={logo}
                 alt="Vytal logo"
                 sx={{
                   height: ['30px', '36px', '36px'],
+                  width: 'auto',
                 }}
               />
             </Link>
@@ -60,6 +67,7 @@ const Header = () => {
                 color: 'primaryDark',
               },
             }}
+            aria-label="Menu"
             onClick={() => setShowMenu(!showMenu)}
           >
             {showMenu ? <X size={25} /> : <Menu size={25} />}

@@ -67,7 +67,7 @@ const HomePage = () => {
               href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=header"
               target="_blank"
             >
-              <img src={ChromeIcon} alt="Chrome logo" width="20" />
+              <img src={ChromeIcon} alt="Chrome logo" width="20" height="20" />
               Chrome
             </Link>
             <Link
@@ -76,7 +76,7 @@ const HomePage = () => {
               href="https://microsoftedge.microsoft.com/addons/detail/vytal-spoof-timezone-l/nkaemodamjfefjgbefolnpnlccpdfpap"
               target="_blank"
             >
-              <img src={EdgeIcon} alt="Edge logo" width="20" />
+              <img src={EdgeIcon} alt="Edge logo" width="20" height="20" />
               Edge
             </Link>
             <Link
@@ -85,7 +85,7 @@ const HomePage = () => {
               href="https://addons.opera.com/en/extensions/details/vytal-spoof-timezone-location-user-agent/"
               target="_blank"
             >
-              <img src={OperaIcon} alt="Opera logo" width="20" />
+              <img src={OperaIcon} alt="Opera logo" width="20" height="20" />
               Opera
             </Link>
           </Flex>
