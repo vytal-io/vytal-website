@@ -64,7 +64,7 @@ const HomePage = () => {
             <Link
               variant="button"
               sx={{ width: '135px' }}
-              href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=header"
+              href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=home"
               target="_blank"
             >
               <img src={ChromeIcon} alt="Chrome logo" width="20" height="20" />
