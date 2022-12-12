@@ -30,7 +30,7 @@
     "start": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "deploy": "echo 'vytal.io' > ./build/CNAME && gh-pages -d dist"
+    "deploy": "echo 'vytal.io' > ./dist/CNAME && gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [

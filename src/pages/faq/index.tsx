@@ -5,7 +5,7 @@ import FaqItem from './FaqItem'
 
 const FaqPage = () => {
   return (
-    <PageBody title='FAQ'>
+    <PageBody title="FAQ">
       <Block sx={{ p: ['12px', '20px', '20px'], background: 'offWhite' }}>
         <Heading as="h1" variant="styles.h1">
           Frequently Asked Questions
@@ -48,7 +48,7 @@ const FaqPage = () => {
         <FaqItem title="How to test the extension?">
           You can test and compare Vytal and other spoofing extensions using the
           scan tool{' '}
-          <Link variant="text" href="/scan" target="_blank">
+          <Link variant="text" href="/#/scan" target="_blank">
             Vytal scan tool
           </Link>
           .

@@ -10,13 +10,13 @@ const HeaderMenu = ({ ...restProps }) => {
           alignItems: 'center',
         }}
       >
-        <Link variant="nav" href="/scan">
+        <Link variant="nav" href="/#/scan">
           Scan
         </Link>
-        <Link variant="nav" href="/faq">
+        <Link variant="nav" href="/#/faq">
           FAQ
         </Link>
-        <Link variant="nav" href="/donate">
+        <Link variant="nav" href="/#/donate">
           Donate
         </Link>
       </Flex>
