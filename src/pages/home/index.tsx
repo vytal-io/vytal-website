@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Box, Flex, Heading, Link } from 'theme-ui'
+import { Box, Flex, Link } from 'theme-ui'
 import { homeScan } from 'scan'
 import Block from 'components/Block'
 import PageBody from 'components/PageBody'
@@ -18,11 +18,12 @@ const HomePage = () => {
   }, [])
 
   return (
-    <PageBody>
+    <PageBody title="Vytal - Spoof Timezone, Geolocation, Locale and User Agent">
       <Box
         sx={{
           display: ['block', 'block', 'flex'],
-          height: ['auto', 'auto', 'calc( 90vh - 84px)'],
+          height: ['auto', 'auto', 'calc(90vh - 84px)'],
+          minHeight: ['auto', 'auto', '450px'],
           alignItems: 'center',
           justifyContent: 'space-between',
         }}

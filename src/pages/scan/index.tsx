@@ -14,7 +14,7 @@ const ScanPage = () => {
   }, [])
 
   return (
-    <PageBody>
+    <PageBody title="Scan">
       <Block sx={{ p: ['12px', '20px', '20px'], background: 'offWhite' }}>
         <Heading
           as="h1"

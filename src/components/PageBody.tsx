@@ -1,10 +1,18 @@
+import { useEffect } from 'react'
 import { Flex } from 'theme-ui'
 
 interface PageBodyProps {
-  children: React.ReactNode 
+  title?: string
+  children: React.ReactNode
 }
 
-const PageBody = ({ children }: PageBodyProps) => {
+const PageBody = ({ title, children }: PageBodyProps) => {
+  useEffect(() => {
+    if (title) {
+      document.title = title
+    }
+  }, [])
+
   return (
     <Flex
       sx={{

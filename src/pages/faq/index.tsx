@@ -5,7 +5,7 @@ import FaqItem from './FaqItem'
 
 const FaqPage = () => {
   return (
-    <PageBody>
+    <PageBody title='FAQ'>
       <Block sx={{ p: ['12px', '20px', '20px'], background: 'offWhite' }}>
         <Heading as="h1" variant="styles.h1">
           Frequently Asked Questions
