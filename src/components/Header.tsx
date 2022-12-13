@@ -88,6 +88,7 @@ const Header = () => {
           fontSize: '17px',
           p: '18px',
         }}
+        onClick={() => setShowMenu(false)}
       >
         <HeaderMenu />
         <Link
