@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Box, Heading, Link } from 'theme-ui'
+import { Box, Heading, Link, Paragraph } from 'theme-ui'
 import { fullScan } from 'scan'
 import Block from 'components/Block'
 import PageBody from 'components/PageBody'
@@ -23,36 +23,38 @@ const ScanPage = () => {
         >
           Scan
         </Heading>
-        Vytal is a browser extension that can spoof your timezone, locale,
-        geolocation and user agent. This data can be used to determine your
-        location and track you online. Use this scan to test if any of this data
-        is exposed. Red highlighting means that tampering has been detected and
-        that the data is not authentic. The Vytal extension spoofs all of these
-        values undetected. Download for{' '}
-        <Link
-          variant="text"
-          href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=scan"
-          target="_blank"
-        >
-          Chrome
-        </Link>
-        ,{' '}
-        <Link
-          variant="text"
-          href="https://microsoftedge.microsoft.com/addons/detail/vytal-spoof-timezone-l/nkaemodamjfefjgbefolnpnlccpdfpap"
-          target="_blank"
-        >
-          Edge
-        </Link>{' '}
-        or{' '}
-        <Link
-          variant="text"
-          href="https://addons.opera.com/en/extensions/details/vytal-spoof-timezone-location-user-agent"
-          target="_blank"
-        >
-          Opera
-        </Link>
-        .
+        <Paragraph sx={{ all: 'unset', color: 'textSecondary' }}>
+          Vytal is a browser extension that can spoof your timezone, locale,
+          geolocation and user agent. This data can be used to determine your
+          location and track you online. Use this scan to test if any of this
+          data is exposed. Red highlighting means that tampering has been
+          detected and that the data is not authentic. The Vytal extension
+          spoofs all of these values undetected. Download for{' '}
+          <Link
+            variant="text"
+            href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=scan"
+            target="_blank"
+          >
+            Chrome
+          </Link>
+          ,{' '}
+          <Link
+            variant="text"
+            href="https://microsoftedge.microsoft.com/addons/detail/vytal-spoof-timezone-l/nkaemodamjfefjgbefolnpnlccpdfpap"
+            target="_blank"
+          >
+            Edge
+          </Link>{' '}
+          or{' '}
+          <Link
+            variant="text"
+            href="https://addons.opera.com/en/extensions/details/vytal-spoof-timezone-location-user-agent"
+            target="_blank"
+          >
+            Opera
+          </Link>
+          .
+        </Paragraph>
       </Block>
       {scanData ? (
         <>

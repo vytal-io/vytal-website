@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Box, Flex, Heading, Link } from 'theme-ui'
+import { Box, Flex, Heading, Link, Paragraph } from 'theme-ui'
 import { homeScan } from 'scan'
 import Block from 'components/Block'
 import PageBody from 'components/PageBody'
@@ -41,22 +41,22 @@ const HomePage = () => {
             sx={{
               fontSize: ['38px', '50px', '50px'],
               lineHeight: ['50px', '65px', '65px'],
+              mb: ['18px', '20px', '20px'],
             }}
           >
             Spoof Timezone, Geolocation, Locale and User Agent.
           </Heading>
-          <Heading
-            variant="styles.h2"
+          <Paragraph
             sx={{
+              all: 'unset',
               fontSize: ['17px', '18px', '18px'],
               lineHeight: '30px',
-              mt: ['18px', '20px', '20px'],
             }}
           >
             This data can be used to determine your location and track you
             online even with a VPN. Download the Vytal extension to spoof this
             data and protect yourself online.
-          </Heading>
+          </Paragraph>
           <Flex
             sx={{
               gap: ['12px', '20px', '20px'],

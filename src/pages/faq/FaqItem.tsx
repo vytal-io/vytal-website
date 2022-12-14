@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Button, Flex, Heading } from 'theme-ui'
+import { Box, Button, Flex, Heading, Paragraph } from 'theme-ui'
 import { ChevronUp, ChevronDown } from 'react-feather'
 
 interface FaqItemProps {
@@ -24,7 +24,16 @@ const FaqItem = ({ title, children }: FaqItemProps) => {
         </Box>
       </Flex>
       {showAnswer && (
-        <Box sx={{ mt: '10px', color: 'textSecondary' }}>{children}</Box>
+        <Box sx={{ mt: '10px' }}>
+          <Paragraph
+            sx={{
+              all: 'unset',
+              color: 'textSecondary',
+            }}
+          >
+            {children}
+          </Paragraph>
+        </Box>
       )}
     </Button>
   )
