@@ -52,7 +52,7 @@ const homeScan = async () =>
       timezone: workerData.timezone.value,
       locale: workerData.locale.value,
       dateLocale: workerData.dateLocale.value,
-      platform: workerData.platform.value,
+      platform: navigator.platform,
       browser: `${parserResults.browser.name} ${parserResults.browser.version}`,
       engine: `${parserResults.engine.name} ${parserResults.engine.version}`,
     }
