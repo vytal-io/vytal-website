@@ -32,8 +32,8 @@ const Header = () => {
             <Link
               href="/"
               sx={{
-                height: ['30px', '30px', '36px'],
-                width: ['133px', '133px', '160px'],
+                height: ['30px', '36px', '36px'],
+                width: ['133px', '160px', '160px'],
               }}
             >
               <Image
