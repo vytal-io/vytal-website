@@ -19,15 +19,15 @@ const fullScan = async () => {
         ...clientData,
         [key]: {
           topWindow: {
-            value: systemData[key].value,
+            value: systemData[key].value.toString(),
             tampered: systemData[key].tampered,
           },
           frame: {
-            value: frameData[key].value,
+            value: frameData[key].value.toString(),
             tampered: frameData[key].tampered,
           },
           webWorker: {
-            value: workerData[key].value,
+            value: workerData[key].value.toString(),
             tampered: workerData[key].tampered,
           },
         },
