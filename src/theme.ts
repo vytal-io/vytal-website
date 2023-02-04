@@ -21,6 +21,9 @@ export const theme: Theme = {
       lineHeight: '20px',
       margin: '0',
       color: 'textPrimary',
+      li: {
+        mb: '8px',
+      },
     },
     h1: {
       fontSize: ['20px', '24px', '24px'],
@@ -92,6 +95,13 @@ export const theme: Theme = {
     input: {
       color: 'textSecondary',
       borderColor: 'border',
+    },
+  },
+  images: {
+    vpnLogo: {
+      height: '45px',
+      width: 'auto',
+      mb: '8px',
     },
   },
 }

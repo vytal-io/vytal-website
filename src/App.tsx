@@ -8,6 +8,7 @@ import Header from 'components/Header'
 import Footer from 'components/Footer'
 import ErrorPage from 'pages/error'
 import FaqPage from 'pages/faq'
+import VpnsPage from 'pages/vpns'
 
 const router = createHashRouter([
   {
@@ -28,6 +29,10 @@ const router = createHashRouter([
       {
         path: '/donate',
         element: <DonatePage />,
+      },
+      {
+        path: '/vpns',
+        element: <VpnsPage />,
       },
     ],
   },
