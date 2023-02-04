@@ -28,8 +28,8 @@ const VpnsPage = () => {
         >
           <Image src={nordLogo} alt="NordVPN logo" variant="vpnLogo" />
           <li>Verified zero-logs policy & no IP leaks</li>
-          <li>3200+ servers in 100 countries</li>
-          <li>Unlimited device connections</li>
+          <li>5,600+ servers in 59 countries</li>
+          <li>24/7 live chat support</li>
         </VpnBlock>
         <VpnBlock
           url="https://get.surfshark.net/aff_c?offer_id=926&aff_id=17240&source=vw"
