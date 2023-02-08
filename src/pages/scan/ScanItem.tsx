@@ -7,7 +7,7 @@ interface ScanItemProps {
   noBorder?: boolean
 }
 
-const ScanItem = ({ title, value, noBorder }: ScanItemProps) => {
+const ScanItem = ({ title, tampered, value, noBorder }: ScanItemProps) => {
   return (
     <Flex
       sx={{
@@ -16,6 +16,7 @@ const ScanItem = ({ title, value, noBorder }: ScanItemProps) => {
         borderColor: 'border',
         justifyContent: 'space-between',
         fontSize: ['13px', '15px', '15px'],
+        backgroundColor: tampered ? 'red' : 'background',
       }}
     >
       <Box sx={{ whiteSpace: 'nowrap', minWidth: '135px' }}>{title}</Box>
