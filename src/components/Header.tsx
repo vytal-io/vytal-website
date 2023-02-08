@@ -16,7 +16,7 @@ const Header = () => {
           height: ['55px', '60px', '60px'],
           borderBottom: '1px solid',
           borderColor: 'border',
-          background: 'offWhite',
+          background: 'backgroundSecondary',
           pl: ['none', 'none', 'calc(100vw - 100%)'],
         }}
       >
@@ -80,7 +80,7 @@ const Header = () => {
           position: 'absolute',
           top: '55px',
           right: '0',
-          background: 'offWhite',
+          background: 'backgroundSecondary',
           border: '1px solid',
           borderColor: 'border',
           borderTop: 'none',

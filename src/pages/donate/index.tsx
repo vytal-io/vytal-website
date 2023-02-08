@@ -7,7 +7,9 @@ import PageBody from 'components/PageBody'
 const DonatePage = () => {
   return (
     <PageBody title="Donate">
-      <Block sx={{ p: ['12px', '20px', '20px'], background: 'offWhite' }}>
+      <Block
+        sx={{ p: ['12px', '20px', '20px'], background: 'backgroundSecondary' }}
+      >
         <Heading as="h1" variant="styles.h1">
           Donate
         </Heading>

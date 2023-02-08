@@ -4,12 +4,11 @@ export const theme: Theme = {
   breakpoints: ['600px', '1050px'],
   colors: {
     textPrimary: '#212529',
-    textSecondary: '#75797c',
+    textSecondary: '#696c6f',
     background: '#fff',
-    secondaryBackground: '#fcfcfc',
+    backgroundSecondary: '#fbfbfb',
     primary: '#a55eea',
     primaryDark: '#9454d2',
-    offWhite: '#fefefe',
     border: '#d8dee4',
     red: '#fae6e8',
     icon: '#83878a',
@@ -45,7 +44,7 @@ export const theme: Theme = {
       cursor: 'pointer',
       color: 'textPrimary',
       p: ['12px', '20px', '20px'],
-      backgroundColor: 'offWhite',
+      backgroundColor: 'backgroundSecondary',
       border: '1px solid',
       borderColor: 'border',
       borderRadius: '4px',
@@ -95,6 +94,7 @@ export const theme: Theme = {
     input: {
       color: 'textSecondary',
       borderColor: 'border',
+      backgroundColor: 'background',
     },
   },
   images: {

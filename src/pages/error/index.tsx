@@ -3,8 +3,10 @@ import PageBody from 'components/PageBody'
 
 const ErrorPage = () => {
   return (
-    <PageBody title='Error'>
-      <Block sx={{ p: ['12px', '20px', '20px'], background: 'offWhite' }}>
+    <PageBody title="Error">
+      <Block
+        sx={{ p: ['12px', '20px', '20px'], background: 'backgroundSecondary' }}
+      >
         Error: page not found.
       </Block>
     </PageBody>

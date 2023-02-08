@@ -105,7 +105,7 @@ const HomePage = () => {
             sx={{
               p: ['12px', '12px 20px', '12px 20px'],
               borderRadius: '4px',
-              background: 'secondaryBackground',
+              background: 'backgroundSecondary',
             }}
           >
             Test and compare Vytal and other extensions using the{' '}

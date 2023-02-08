@@ -8,7 +8,9 @@ import VpnBlock from './VpnBlock'
 const VpnsPage = () => {
   return (
     <PageBody title="VPN Recommendations">
-      <Block sx={{ p: ['12px', '20px', '20px'], background: 'offWhite' }}>
+      <Block
+        sx={{ p: ['12px', '20px', '20px'], background: 'backgroundSecondary' }}
+      >
         <Heading as="h1" variant="styles.h1">
           VPN Recommendations
         </Heading>

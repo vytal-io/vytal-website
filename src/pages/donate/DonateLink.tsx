@@ -14,7 +14,7 @@ const DonateLink = ({ title, url }: DonateLinkProps) => {
         display: 'block',
         textDecoration: 'none',
         p: ['12px', '20px', '20px'],
-        background: 'offWhite',
+        background: 'backgroundSecondary',
         border: '1px solid',
         borderColor: 'border',
         borderRadius: '4px',

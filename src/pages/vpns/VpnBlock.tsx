@@ -18,6 +18,7 @@ const VpnBlock = ({ url, linkText, children }: VpnBlockProps) => {
         mb: '16px',
         display: 'block',
         textDecoration: 'none',
+        background: 'backgroundSecondary',
         color: 'textPrimary',
         '&:hover': {
           borderColor: 'primary',
