@@ -1,5 +1,7 @@
 const getGeocode = (lat, lon) =>
-  fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
+  fetch(
+    `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
+  )
     .then((response) => response.json())
     .then((data) => data.display_name)
 
@@ -7,7 +9,7 @@ const checkGetCurrentPosition = () => {
   if (
     !navigator.geolocation.getCurrentPosition
       .toString()
-      .includes('[native code]')
+      .includes('function getCurrentPosition() { [native code] }')
   ) {
     return true
   }
