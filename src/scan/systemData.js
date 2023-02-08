@@ -1,5 +1,9 @@
 const checkDatePrototype = () => {
-  if (!Date.prototype.setDate.toString().includes('[native code]')) {
+  if (
+    !Date.prototype.setDate
+      .toString()
+      .includes('function setDate() { [native code] }')
+  ) {
     return true
   }
   return false
@@ -20,7 +24,7 @@ const checkIntlPrototype = () => {
   if (
     !Intl.DateTimeFormat.prototype.resolvedOptions
       .toString()
-      .includes('[native code]')
+      .includes('function resolvedOptions() { [native code] }')
   ) {
     return true
   }
