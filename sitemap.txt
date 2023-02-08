@@ -1,4 +1,4 @@
 https://vytal.io
-https://vytal.io/scan
-https://vytal.io/faq
-https://vytal.io/donate
+https://vytal.io/#/scan
+https://vytal.io/#/faq
+https://vytal.io/#/donate
