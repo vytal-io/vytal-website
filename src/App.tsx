@@ -1,5 +1,5 @@
 import { Flex, ThemeProvider } from 'theme-ui'
-import { createHashRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { theme } from './theme'
 import HomePage from 'pages/home'
 import ScanPage from 'pages/scan'
@@ -10,7 +10,7 @@ import ErrorPage from 'pages/error'
 import FaqPage from 'pages/faq'
 import VpnsPage from 'pages/vpns'
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     errorElement: <ErrorPage />,
     children: [

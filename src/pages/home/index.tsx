@@ -109,7 +109,7 @@ const HomePage = () => {
             }}
           >
             Test and compare Vytal and other extensions using the{' '}
-            <Link variant="text" href="/#/scan">
+            <Link variant="text" href="/scan">
               full scan
             </Link>
             .

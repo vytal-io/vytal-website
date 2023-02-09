@@ -50,7 +50,7 @@ const FaqPage = () => {
         <FaqItem title="How to test the extension?">
           You can test and compare Vytal and other spoofing extensions using the
           scan tool{' '}
-          <Link variant="text" href="/#/scan" target="_blank">
+          <Link variant="text" href="/scan" target="_blank">
             Vytal scan tool
           </Link>
           .
