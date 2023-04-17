@@ -11,7 +11,7 @@ const VpnBlock = ({ url, linkText, children }: VpnBlockProps) => {
     <Link
       href={url}
       sx={{
-        border: '1px solid',
+        border: '2px solid',
         borderRadius: '4px',
         borderColor: 'border',
         p: '16px',
@@ -20,6 +20,7 @@ const VpnBlock = ({ url, linkText, children }: VpnBlockProps) => {
         textDecoration: 'none',
         background: 'backgroundSecondary',
         color: 'textPrimary',
+        transition: 'all 0.15s ease-in-out',
         '&:hover': {
           borderColor: 'primary',
         },

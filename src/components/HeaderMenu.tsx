@@ -8,16 +8,21 @@ const HeaderMenu = ({ ...restProps }) => {
           flexDirection: ['column', 'row', 'row'],
           gap: '24px',
           alignItems: 'center',
+          color: 'background',
         }}
       >
-        <Link variant="nav" href="/scan">
+        <Link variant="header" href="/scan">
           Scan
         </Link>
-        <Link variant="nav" href="/faq">
+        <Link variant="header" href="/faq">
           FAQ
         </Link>
-        <Link variant="nav" href="/donate">
-          Donate
+        <Link
+          variant="header"
+          href="https://github.com/vytal-io"
+          target="_blank"
+        >
+          GitHub
         </Link>
       </Flex>
     </Box>

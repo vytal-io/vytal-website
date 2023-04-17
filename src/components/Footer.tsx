@@ -11,13 +11,13 @@ const Footer = () => {
         my: '24px',
       }}
     >
-      <Link variant="nav" href="mailto:contact@vytal.io">
+      <Link variant="footer" href="mailto:contact@vytal.io">
         Contact
       </Link>
-      <Link variant="nav" href="https://github.com/vytal-io" target="_blank">
-        GitHub
+      <Link variant="footer" href="/donate">
+        Donate
       </Link>
-      <Link variant="nav" href="https://twitter.com/vytalio" target="_blank">
+      <Link variant="footer" href="https://twitter.com/vytalio" target="_blank">
         Twitter
       </Link>
     </Flex>

@@ -15,10 +15,11 @@ const DonateLink = ({ title, url }: DonateLinkProps) => {
         textDecoration: 'none',
         p: ['12px', '20px', '20px'],
         background: 'backgroundSecondary',
-        border: '1px solid',
+        border: '2px solid',
         borderColor: 'border',
         borderRadius: '4px',
         lineHeight: '24px',
+        transition: 'all 0.15s ease-in-out',
         ':hover': {
           borderColor: 'primary',
         },

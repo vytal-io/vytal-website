@@ -4,7 +4,8 @@ export const theme: Theme = {
   breakpoints: ['600px', '1050px'],
   colors: {
     textPrimary: '#212529',
-    textSecondary: '#696c6f',
+    textSecondary: '#545658',
+    textPurple: '#854BBD',
     background: '#fff',
     backgroundSecondary: '#fbfbfb',
     primary: '#a55eea',
@@ -29,14 +30,14 @@ export const theme: Theme = {
       fontWeight: '500',
       color: 'textPrimary',
       fontFamily:
-        "'Arial', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'",
+        "'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantrell', 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
     },
     h2: {
       fontSize: ['16px', '20px', '20px'],
       fontWeight: '500',
       color: 'textPrimary',
       fontFamily:
-        "'Arial', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'",
+        "'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantrell', 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
     },
   },
   buttons: {
@@ -45,7 +46,7 @@ export const theme: Theme = {
       color: 'textPrimary',
       p: ['12px', '20px', '20px'],
       backgroundColor: 'backgroundSecondary',
-      border: '1px solid',
+      border: '2px solid',
       borderColor: 'border',
       borderRadius: '4px',
       width: '100%',
@@ -55,15 +56,26 @@ export const theme: Theme = {
       MozUserSelect: 'text',
       MsUserSelect: 'text',
       userSelect: 'text',
+      transition: 'all 0.15s ease-in-out',
       ':hover': {
         borderColor: 'primary',
       },
     },
   },
   links: {
-    nav: {
+    header: {
+      textDecoration: 'none',
+      color: ['textPrimary', 'background', 'background'],
+      fontWeight: '500',
+      transition: 'all 0.15s ease-in-out',
+      ':hover': {
+        opacity: '0.85',
+      },
+    },
+    footer: {
       textDecoration: 'none',
       color: 'textSecondary',
+      transition: 'all 0.15s ease-in-out',
       ':hover': {
         color: 'primaryDark',
       },
@@ -85,6 +97,8 @@ export const theme: Theme = {
       background: 'primary',
       borderRadius: '4px',
       padding: '8px 16px',
+      fontWeight: '500',
+      transition: 'all 0.15s ease-in-out',
       ':hover': {
         background: 'primaryDark',
       },
@@ -93,8 +107,10 @@ export const theme: Theme = {
   forms: {
     input: {
       color: 'textSecondary',
-      borderColor: 'border',
       backgroundColor: 'background',
+      border: '2px solid',
+      borderColor: 'border',
+      outline: 'none',
     },
   },
   images: {

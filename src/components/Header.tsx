@@ -14,9 +14,7 @@ const Header = () => {
           alignItems: 'center',
           justifyContent: 'center',
           height: ['55px', '60px', '60px'],
-          borderBottom: '1px solid',
-          borderColor: 'border',
-          background: 'backgroundSecondary',
+          background: 'primary',
           pl: ['none', 'none', 'calc(100vw - 100%)'],
         }}
       >
@@ -51,7 +49,16 @@ const Header = () => {
             variant="button"
             href="https://chrome.google.com/webstore/detail/vytal-spoof-timezone-loca/ncbknoohfjmcfneopnfkapmkblaenokb?utm_source=header"
             target="_blank"
-            sx={{ display: ['none', 'block', 'block'] }}
+            sx={{
+              display: ['none', 'block', 'block'],
+              backgroundColor: 'white',
+              color: 'textPurple',
+              fontWeight: '500',
+              ':hover': {
+                background: 'white',
+                opacity: '0.85',
+              },
+            }}
           >
             Download Extension
           </Link>
@@ -62,9 +69,10 @@ const Header = () => {
               display: ['block', 'none', 'none'],
               width: '25px',
               height: '25px',
-              color: 'icon',
+              color: 'background',
+              transition: 'all 0.15s ease-in-out',
               ':hover': {
-                color: 'primaryDark',
+                opacity: '0.85',
               },
             }}
             aria-label="Menu"
@@ -81,7 +89,7 @@ const Header = () => {
           top: '55px',
           right: '0',
           background: 'backgroundSecondary',
-          border: '1px solid',
+          border: '2px solid',
           borderColor: 'border',
           borderTop: 'none',
           borderRadius: '0 0 4px 4px',

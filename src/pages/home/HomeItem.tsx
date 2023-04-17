@@ -11,14 +11,16 @@ const HomeItem = ({ title, value, noBorder }: ScanItemProps) => {
     <Flex
       sx={{
         p: ['12px', '20px', '20px'],
-        borderBottom: noBorder ? 'none' : '1px solid',
+        borderBottom: noBorder ? 'none' : '2px solid',
         borderColor: 'border',
         justifyContent: 'space-between',
         fontSize: ['16px', '18px', '18px'],
         borderRadius: noBorder ? '4px' : '0',
       }}
     >
-      <Box sx={{ whiteSpace: 'nowrap', minWidth: '135px' }}>{title}</Box>
+      <Box sx={{ whiteSpace: 'nowrap', minWidth: '135px', fontWeight: '500' }}>
+        {title}
+      </Box>
       <Box sx={{ color: 'textSecondary', lineBreak: 'anywhere' }}>
         {value || 'null'}
       </Box>

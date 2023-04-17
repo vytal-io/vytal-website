@@ -30,7 +30,7 @@ const HomePage = () => {
       >
         <Box
           sx={{
-            width: ['100%', '100%', '45%'],
+            width: ['100%', '100%', '46%'],
             mb: ['30px', '30px', '0'],
             textAlign: ['center', 'center', 'left'],
           }}
@@ -61,7 +61,7 @@ const HomePage = () => {
             sx={{
               gap: ['12px', '20px', '20px'],
               mt: ['24px', '24px', '30px'],
-              justifyContent: 'center',
+              justifyContent: ['center', 'center', 'space-between'],
             }}
           >
             <Link
@@ -93,7 +93,7 @@ const HomePage = () => {
             </Link>
           </Flex>
         </Box>
-        <Block sx={{ width: ['100%', '100%', '45%'], mb: 0 }}>
+        <Block sx={{ width: ['100%', '100%', '46%'], mb: 0 }}>
           <HomeItem title="Timezone" value={scanData?.timezone || ' '} />
           <HomeItem title="Locale" value={scanData?.locale || ' '} />
           <HomeItem title="Date" value={scanData?.dateLocale || ' '} />

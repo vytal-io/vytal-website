@@ -27,10 +27,6 @@ const DonatePage = () => {
           title="Paypal"
           url="https://www.paypal.com/donate/?hosted_button_id=ZA299UEACUPLU"
         />
-        <DonateLink
-          title="Buy Me a Coffee"
-          url="https://www.buymeacoffee.com/vytal"
-        />
         <DonateBlock
           title="Bitcoin (BTC)"
           address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"

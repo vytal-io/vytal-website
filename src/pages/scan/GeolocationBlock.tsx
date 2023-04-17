@@ -7,7 +7,7 @@ const GeolocationBlock = ({ geolocationData }: any) => {
     <Block>
       <Box
         sx={{
-          borderBottom: '1px solid',
+          borderBottom: '2px solid',
           borderColor: 'border',
           p: ['12px', '16px 20px', '16px 20px'],
           borderRadius: '4px 4px 0 0',

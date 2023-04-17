@@ -7,7 +7,7 @@ const Block: React.FC<BlockProps> = ({ children, ...props }) => {
     <Box
       {...props}
       sx={{
-        border: '1px solid',
+        border: '2px solid',
         borderColor: 'border',
         borderRadius: '4px',
         width: '100%',
