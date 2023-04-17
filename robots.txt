@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
-Sitemap: hhttps://vytal.io/sitemap.txt
+Sitemap: https://vytal.io/sitemap.txt
 User-agent: *
 Disallow:
