@@ -1,4 +1,4 @@
-import { Box, Heading } from 'theme-ui'
+import { Flex, Heading } from 'theme-ui'
 import Block from 'components/Block'
 import DonateBlock from './DonateBlock'
 import DonateLink from './DonateLink'
@@ -14,13 +14,10 @@ const DonatePage = () => {
           Donate
         </Heading>
       </Block>
-      <Box
+      <Flex
         sx={{
-          display: 'grid',
-          gap: ['12px', '24px', '24px'],
-          width: '100%',
-          margin: '0 auto',
-          gridTemplateColumns: ['none', 'none', 'repeat(2, 1fr)'],
+          flexDirection: 'column',
+          gap: ['12px', '18px', '18px'],
         }}
       >
         <DonateLink
@@ -75,7 +72,7 @@ const DonatePage = () => {
           title="Cardano (ADA)"
           address="bc1q5zts58u5d2t0rhxndlx7pnrsy5twtfn4sw5m4e"
         /> */}
-      </Box>
+      </Flex>
     </PageBody>
   )
 }
